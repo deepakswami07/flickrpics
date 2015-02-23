@@ -1,3 +1,11 @@
+var $searchPicsHTML = " ";
+	$searchPicsHTML += '<section>';
+	$searchPicsHTML += '<h1>search pics</h1>';
+	$searchPicsHTML += '<article>';
+	$searchPicsHTML += '<p class="lead">Type in a search term to find the most recent photos that  have been posted on Flickr.</p>';
+	$searchPicsHTML +=	'</article>';
+	$searchPicsHTML += '</section>';
+
 var $friendsPicsHTML = " ";
 	$friendsPicsHTML += '<section>';
 	$friendsPicsHTML += '<h1>friends pics</h1>';
@@ -22,6 +30,11 @@ var $aboutHTML = " ";
 	$aboutHTML += '<p class="lead">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most recent posts on flickr by category, friends or your friend’s favorites.</p>';
 	$aboutHTML +=	'</article>';
 	$aboutHTML += '</section>';
+
+
+$("#searchPics").click(function(){
+	document.getElementById("toFill").innerHTML = $searchPicsHTML;
+});
 
 
 $("#friendsPics").click(function(){
