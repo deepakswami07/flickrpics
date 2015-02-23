@@ -1,3 +1,5 @@
+// begin ajax for menu
+
 var $searchPicsHTML = " ";
 	$searchPicsHTML += '<section>';
 	$searchPicsHTML += '<h1>search pics</h1>';
@@ -16,12 +18,11 @@ var $friendsPicsHTML = " ";
 
 var $favoritesHTML = " ";
 	$favoritesHTML += '<section>';
-	$favoritesHTML += '<h1>friends favorites pics</h1>';
+	$favoritesHTML += '<h1>friends fav pics</h1>';
 	$favoritesHTML += '<article>';
 	$favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s name and find their favorite photos.</p>';
 	$favoritesHTML +=	'</article>';
 	$favoritesHTML += '</section>';
-
 
 var $aboutHTML = " ";
 	$aboutHTML += '<section>';
@@ -49,6 +50,6 @@ $("#about").click(function(){
 	document.getElementById("toFill").innerHTML = $aboutHTML;
 });
 
-
+// end ajax for menu
 
 
