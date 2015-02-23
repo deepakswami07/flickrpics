@@ -6,13 +6,13 @@ var $friendsPicsHTML = " ";
 	$friendsPicsHTML +=	'</article>';
 	$friendsPicsHTML += '</section>';
 
-// var $favoritesHTML = " ";
-// 	$favoritesHTML += '<section>';
-// 	$favoritesHTML += '<h1>friends favorites pics</h1>';
-// 	$favoritesHTML += '<article>';
-// 	$favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s name and find their favorite photos.</p>';
-// 	$favoritesHTML +=	'</article>';
-// 	$favoritesHTML += '</section>';
+var $favoritesHTML = " ";
+	$favoritesHTML += '<section>';
+	$favoritesHTML += '<h1>friends favorites pics</h1>';
+	$favoritesHTML += '<article>';
+	$favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s name and find their favorite photos.</p>';
+	$favoritesHTML +=	'</article>';
+	$favoritesHTML += '</section>';
 
 
 $("#friendsPics").click(function(){
@@ -20,10 +20,10 @@ $("#friendsPics").click(function(){
 	document.getElementById("toFill").innerHTML = $friendsPicsHTML;
 });
 
-// $("#favorites").click(function(){
-// 	console.log("hello");
-// 	document.getElementById("toFill").innerHTML = $favoritesHTML;
-//     });
+$("#favorites").click(function(){
+	console.log("hello");
+	document.getElementById("toFill").innerHTML = $favoritesHTML;
+    });
 
 
 
