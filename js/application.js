@@ -15,15 +15,26 @@ var $favoritesHTML = " ";
 	$favoritesHTML += '</section>';
 
 
+var $aboutHTML = " ";
+	$aboutHTML += '<section>';
+	$aboutHTML += '<h1>about flickrpics</h1>';
+	$aboutHTML += '<article>';
+	$aboutHTML += '<p class="lead">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most recent posts on flickr by category, friends or your friend’s favorites.</p>';
+	$aboutHTML +=	'</article>';
+	$aboutHTML += '</section>';
+
+
 $("#friendsPics").click(function(){
-	console.log("hello");
 	document.getElementById("toFill").innerHTML = $friendsPicsHTML;
 });
 
 $("#favorites").click(function(){
-	console.log("hello");
 	document.getElementById("toFill").innerHTML = $favoritesHTML;
-    });
+});
+
+$("#about").click(function(){
+	document.getElementById("toFill").innerHTML = $aboutHTML;
+});
 
 
 
