@@ -37,7 +37,6 @@ $("#searchPics").click(function(){
 	document.getElementById("toFill").innerHTML = $searchPicsHTML;
 });
 
-
 $("#friendsPics").click(function(){
 	document.getElementById("toFill").innerHTML = $friendsPicsHTML;
 });
