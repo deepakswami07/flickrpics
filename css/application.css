@@ -28,3 +28,16 @@ form {
   display:none;
   text-align:center;
 }
+
+.grid-25 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ .tablet-grid-50 {
+    float: left;
+    width: 50%;
+  }
