@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$('form').submit(function(event){
 		event.preventDefault();
-		$search = $('#search')
+		$searchField = $('#search');
 	
 
 var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-var animal = $(this).text();
+var animal = $searchField.val();
 
 var flickrOptions = {
 	tag: animal,
@@ -15,11 +15,11 @@ var flickrOptions = {
 function flickrImages(data){
 	var photoHTML = "";
 	photoHTML =+ '<div class="container">';
-	photoHTML =+ '<div class="row">';
-	photoHTML =+ '<div class="col-xs-6 col-sm-4">';
+	photoHTML =+ '<div class="rows">';
+	photoHTML += '<div class="jumbotron">';
 	photoHTML = '<ul>';
 	$.each(data.items, function(i, photos){
-		photoHTML += '<li>';
+		photoHTML += '<li class="col-sm-3 col-sm-3">';
 		photoHTML += '<a href=" ' + photos.link + ' " class="image">';
 		photoHTML += '<img src=" ' + photos.media.m + ' ">';
 		photoHTML += '</a>';
@@ -30,13 +30,13 @@ function flickrImages(data){
 	photoHTML += '</div>';
 	photoHTML += '</div>';
 	photoHTML += '</div>';
-}
+	$("#photos").html(photoHTML);
+	}
 
 	$.getJSON(flickrAPI, flickrOptions, flickrImages );
-});
-
-
 	});
+
+});
 
 
 
