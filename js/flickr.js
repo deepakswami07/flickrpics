@@ -3,6 +3,8 @@ $(document).ready(function(){
 	$('form').submit(function(event){
 		event.preventDefault();
 		console.log("hello");
+		console.log($searchField);
+
 
 		var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		var animal = $searchField.val();
@@ -13,8 +15,7 @@ $(document).ready(function(){
 		}
 
 function flickrImages(data){
-	var photoHTML = "";
-
+	var photoHTML = "
 		var $searchField = $('#search');
 		var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		var animal = $searchField.val();
