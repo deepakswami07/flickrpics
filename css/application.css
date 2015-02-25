@@ -80,7 +80,11 @@ a img {
 }
 
 
-#noMatch {
+#noMatch#footer {
+  text-align: center;
+}
+
+#footer {
   text-align: center;
 }
 
