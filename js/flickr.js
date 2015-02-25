@@ -4,7 +4,6 @@ $(document).ready(function(){
 		event.preventDefault();
 		console.log("hello");
 	
-<<<<<<< HEAD
 console.log($searchField);
 
 var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
@@ -17,7 +16,6 @@ var flickrOptions = {
 
 function flickrImages(data){
 	var photoHTML = "";
-=======
 		var $searchField = $('#search');
 		var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		var animal = $searchField.val();
@@ -36,7 +34,6 @@ function flickrImages(data){
 	photoHTML =+ '<div class="container">';
 	photoHTML =+ '<div class="rows">';
 	photoHTML += '<div class="jumbotron">';
->>>>>>> deepak
 	photoHTML = '<ul>';
 	$.each(data.items, function(i, photos){
 		photoHTML += '<li class="col-sm-3 col-sm-3">';
