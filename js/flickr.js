@@ -15,9 +15,8 @@ $(document).ready(function(){
 		}
 
 function flickrImages(data){
-	var photoHTML = "
+	var photoHTML = " ";
 		var $searchField = $('#search');
-		var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		var animal = $searchField.val();
 		console.log(animal);
 		console.log("hello");
@@ -56,7 +55,3 @@ function flickrImages(data){
 	});
 
 });
-
-
-
-
