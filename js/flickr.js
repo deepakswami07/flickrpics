@@ -13,11 +13,7 @@ $(document).ready(function(){
 	function flickrImages(data){
 	var photoHTML = "";
 	if (data.items.length > 0) {
-		photoHTML =+ '<div class="container">';
-		photoHTML =+ '<div class="rows">';
-		photoHTML += '<div class="jumbotron">';
 		photoHTML = '<ul>';
-
 		$.each(data.items, function(i, photos){
 		photoHTML += '<li class="col-sm-3 col-sm-3">';
 		photoHTML += '<a href=" ' + photos.link + ' " class="image">';
@@ -31,9 +27,6 @@ $(document).ready(function(){
 	}
 
 		photoHTML += '</ul>';
-		photoHTML += '</div>';
-		photoHTML += '</div>';
-		photoHTML += '</div>';
 
 	$("#photos").html(photoHTML);
 	}
