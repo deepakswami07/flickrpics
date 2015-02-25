@@ -2,9 +2,23 @@ $(document).ready(function(){
 	
 	$('form').submit(function(event){
 		event.preventDefault();
-		
+
+		console.log("hello");
+		console.log($searchField);
+
+
+		var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		var animal = $searchField.val();
+
+		var flickrOptions = {
+		tags: animal,
+		format: "json"
+		}
+
+function flickrImages(data){
+	var photoHTML = " ";
+
 		var $searchField = $('#search');
-		var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		var animal = $searchField.val();
 		var flickrOptions = {
       		 tags: animal,
@@ -34,4 +48,7 @@ $(document).ready(function(){
 	$.getJSON(flickrAPI, flickrOptions, flickrImages );
 	});
 
+
 });
+});
+
