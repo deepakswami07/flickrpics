@@ -76,6 +76,10 @@ a img {
   text-align: center;
 }
 
+#noMatch {
+  text-align: center;
+}
+
 /*.grid-25 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
