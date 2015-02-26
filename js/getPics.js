@@ -107,21 +107,32 @@ var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncal
 ////////////////////////////////////
 ///////////////////////////////////
 
+
+
+
 $(document).ready(function(){
 	$("#searchPics").click(function(){
 		$(this).text() === "Search Pics";
-	return searchPictures();
+		return searchPictures();
 	});
 });
 
-	// function searchTerm(){
-	// 	if ($searchField.val === null){
-	// 		var searchHTML = "";
-	// 		searchHTML += '<p>Please enter a search word<p>';
-	// 	} else {
-	// 		return $searchField.val();
-	// 	}
-	// } 
+
+
+// $("#submit").click(function(event){
+// 		event.preventDefault()
+// 		var searchVal = $("#search").val();
+// 		console.log(searchVal);
+// 		if (searchVal.length > 0) {
+// 			console.log("enter search term");
+// 		} else {
+// 			console.log("hello");
+// 		}
+
+// 	});
+
+
+
 
 
 
