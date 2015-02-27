@@ -95,6 +95,7 @@ $home += '</section>';
 
 $("#home").click(function(){
 	 document.getElementById("toFill").innerHTML = $home;
+	 $('form').hide();
 });
 
 $("#searchPics").click(function() {
@@ -116,4 +117,17 @@ $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
 });
 
-// end ajax for menu
+
+// begin contact show
+
+$("#contact").click(function(){
+	$('form').show();
+});
+
+// end contact show
+
+
+
+
+
+
