@@ -9,7 +9,17 @@ $(document).ready(function() {
     $("#friendsPics").click(function() {
     	console.log("hello");
         $(this).text() === "Friends Pics";
+    	$(".image").hide();
         return friendsPictures();
+    });
+});
+
+$(document).ready(function() {
+    $("#favorites").click(function() {
+    	console.log("hello");
+        $(this).text() === "Favorites";
+    	$(".image").hide();
+        return favoritePictures();
     });
 });
 
