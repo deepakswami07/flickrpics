@@ -96,6 +96,13 @@ $home += '</section>';
 $("#home").click(function(){
 	 document.getElementById("toFill").innerHTML = $home;
 	 $('form').hide();
+	 $('form').show();
+});
+
+$("#about").click(function() {
+    document.getElementById("toFill").innerHTML = $aboutHTML;
+    $('form').hide();
+	$('form').show();
 });
 
 $("#searchPics").click(function() {
@@ -113,21 +120,7 @@ $("#favorites").click(function() {
     document.getElementById("form").innerHTML = $favoritesPicsFormHTML;
 });
 
-$("#about").click(function() {
-    document.getElementById("toFill").innerHTML = $aboutHTML;
-});
-
-
-// begin contact show
-
-$("#contact").click(function(){
-	$('form').show();
-});
-
-// end contact show
 
 
 
-
-
-
+// end ajax for menu
