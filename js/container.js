@@ -1,4 +1,4 @@
-// begin ajax for menu
+// begin ajax for search pics
 var $searchPicsHTML = " ";
 $searchPicsHTML += '<section>';
 $searchPicsHTML += '<h1>search pics</h1>';
@@ -6,6 +6,21 @@ $searchPicsHTML += '<article>';
 $searchPicsHTML += '<p class="lead">Type in a search term to find the most recent photos that  have been posted on Flickr.</p>';
 $searchPicsHTML += '</article>';
 $searchPicsHTML += '</section>';
+
+
+var $searchPicsFormHTML = " ";
+$searchPicsFormHTML += '<form class="navbar-form navbar-center" role="search">';
+$searchPicsFormHTML += '<div class="form-group">';
+$searchPicsFormHTML += '<label for="search"></label>';
+$searchPicsFormHTML += '<div class="form-group">';
+$searchPicsFormHTML += '<input type="search" class="form-control" id="search" name="search" placeholder="Search">';
+$searchPicsFormHTML += '<button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$searchPicsFormHTML += '<span class="glyphicon glyphicon-search">Search </span>';
+$searchPicsFormHTML += '</button>';
+$searchPicsFormHTML += '</div>';
+$searchPicsFormHTML += '</div>';
+$searchPicsFormHTML += '</form>';
+// end ajax for search pics
 
 var $friendsPicsHTML = " ";
 $friendsPicsHTML += '<section>';
@@ -34,6 +49,7 @@ $aboutHTML += '</section>';
 
 $("#searchPics").click(function() {
     document.getElementById("toFill").innerHTML = $searchPicsHTML;
+    document.getElementById("form").innerHTML = $searchPicsFormHTML;
 });
 
 $("#friendsPics").click(function() {
