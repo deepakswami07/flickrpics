@@ -1,165 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Flickrpics</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/application.css">
-<!-- [if lt IE 9]
+    <title>Flickrpics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/application.css">
+    <!-- [if lt IE 9]
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 </script>
 [endif] -->
 
 
 </head>
-	<body>
 
-		<div class="container">
-			<div class="masthead">
-				<header "page-header">
-					<ul class="nav nav-pills pull-right">
-						<li><a  class="btn btn-default btn-lg" href="#"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
-					</ul>
-					<h1 class="text-muted">Flickrpics</h1>
-				</header>
-				<hr/>
+<body>
 
-		 		<nav class="navbar-fixed">
-					<ul class="nav nav-tabs nav-justified">
-						
-					</ul>
-				</nav>
-			</div>
+    <div class="container">
+        <div class="masthead">
+            <header "page-header">
+                <ul class="nav nav-pills pull-right">
+                    <li><a class="btn btn-default btn-lg" href="#"><span class="glyphicon glyphicon-user"></span> Signup</a>
+                    </li>
+                </ul>
+                <h1 class="text-muted">Flickrpics</h1>
+            </header>
+            <hr/>
 
-		<!-- navbar begin -->
-			<div class="navbar navbar-inverse navbar-fixed">
+            <nav class="navbar-fixed">
+                <ul class="nav nav-tabs nav-justified">
 
-				<div class="container">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          				<span class="icon-bar"></span>
-          				<span class="icon-bar"></span>
-          				<span class="icon-bar"></span>
-          				<span class="icon-bar"></span>
-                	</button>
+                </ul>
+            </nav>
+        </div>
 
-				<!-- <a id="searchPics" class="navbar-brand active" href="#">Search Pics</a> -->
-				<div class="collapse navbar-collapse">
+        <!-- navbar begin -->
+        <div class="navbar navbar-inverse navbar-fixed">
 
-					<ul class="nav navbar-nav navbar-left">
-						<li><a id="searchPics"  href="#">Search Pics</a></li>
-						<li><a id="friendsPics" href="#">Friends Pics</a></li>
-						<li><a id="favorites" href="#">Favorites</a></li>
-						<li><a id="about" href="#">About</a></li>
-						<li><a data-toggle="modal" href="#contact">Contact</a></li>
-					</ul>
-				</div>
-			</div>
+            <div class="container">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-		</div>
+                <!-- <a id="searchPics" class="navbar-brand active" href="#">Search Pics</a> -->
+                <div class="collapse navbar-collapse">
 
-		<!--  navbar end    -->
-		
-		<!--  contact modal begin -->
-		<div class="modal fade" id="contact" tabindex="-1" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a id="searchPics" href="#">Search Pics</a>
+                        </li>
+                        <li><a id="friendsPics" href="#">Friends Pics</a>
+                        </li>
+                        <li><a id="favorites" href="#">Favorites</a>
+                        </li>
+                        <li><a id="about" href="#">About</a>
+                        </li>
+                        <li><a data-toggle="modal" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-					<form>
-						<div class="modal-header">
-							 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h4><strong>Contact Flickrpics</strong></h4>
-						</div>
-						<div class="modal-body">
+        </div>
 
-							<div class="form-group">
-								<label for="contactName" class="col-lg-2 control-label">Name:</label>
-								<div class="col-lg-10">
-									<input type="text" class="form-control" id="contactName" placeholder="Full Name">
-								</div>
-							</div>
+        <!--  navbar end    -->
 
-							<div class="form-group">
-								<label for="email" class="col-lg-2 control-label">Email:</label>
-								<div class="col-lg-10">
-									<input type="email" class="form-control" id="email" placeholder="you@example.com">
-								</div>
-							</div>
+        <!--  contact modal begin -->
+        <div class="modal fade" id="contact" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-							<div class="form-group">
-								<label for="message" class="col-lg-2 control-label">Message:</label>
-								<div class="col-lg-10">
-									<textarea class="form-control" rows="8"></textarea>
-								</div>
-							</div>
-						</div>
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4><strong>Contact Flickrpics</strong></h4>
+                        </div>
+                        <div class="modal-body">
 
-						<div class="modal-footer">
-							<a class="btn btn-default" data-dismiss="modal">Close</a>
-							 <button type="submit" class="btn btn-primary" data-dismiss="modal">Send</button>
-						</div>
+                            <div class="form-group">
+                                <label for="contactName" class="col-lg-2 control-label">Name:</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="contactName" placeholder="Full Name">
+                                </div>
+                            </div>
 
-					</form>
-				</div>
-			</div>
-		</div>
-		<!--  end contact modal  -->
+                            <div class="form-group">
+                                <label for="email" class="col-lg-2 control-label">Email:</label>
+                                <div class="col-lg-10">
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                </div>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="message" class="col-lg-2 control-label">Message:</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" rows="8"></textarea>
+                                </div>
+                            </div>
+                        </div>
 
-		<!--  search form begin  -->
+                        <div class="modal-footer">
+                            <a class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Send</button>
+                        </div>
 
-		<section id="toFill" class="jumbotron">
-			<h1>Search away....</h1>
-			<article>
-				<p class="lead">Click on search pics, friends pics or favorites and then enter you search term....
-				</p>
-			</article>
-		</section>
-
-				<form class="navbar-form navbar-center" role="search">
-
-					<div class="form-group">
-						<label for="search"></label>
-					</div>
-
-  					<div class="form-group">
-    					<input type="search" class="form-control" id="search" name="search" placeholder="Search">
-  					</div>
-
-  					<button id="submit" type="submit" value="search" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-search"></span> Search</button>
-				</form>
-
-			<!--  search form end  -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--  end contact modal  -->
 
 
-			<!--  container begin -->
+        <!--  search form begin  -->
 
-			<div class="container">
-					</div>
-						<!-- <p id="note" class="lead text-muted"><small>For best results use pluralized words, eg. cats instead of cat</small></p> -->
-	        			<ul id="photos"></ul>
-	      			</div>
-			</div>
+        <section id="toFill" class="jumbotron">
+            <h1>Search away....</h1>
+            <article>
+                <p class="lead">Click on search pics, friends pics or favorites and then enter you search term....
+                </p>
+            </article>
+        </section>
 
-			<!--  container end  -->
-						
+        <form class="navbar-form navbar-center" role="search">
 
-			<!--  footer begin -->
+            <div class="form-group">
+                <label for="search"></label>
+            </div>
 
-		<footer id="footer">
-			<p class="nav-center">&copy; 2014 flickrpics. All rights reserved.</p>
-		</footer>
+            <div class="form-group">
+                <input type="search" class="form-control" id="search" name="search" placeholder="Search">
+            </div>
 
-			<!--  footer end -->
+            <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-search"></span> Search</button>
+        </form>
 
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-	<script src="js/getPics.js" type="text/javascript"></script>
-	<!--<script src="js/flickr.js" type="text/javascript"></script> -->
-	<script src="js/application.js" type="text/javascript"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <!--  search form end  -->
 
-	</body>
+
+        <!--  container begin -->
+
+        <div class="container">
+        </div>
+        <!-- <p id="note" class="lead text-muted"><small>For best results use pluralized words, eg. cats instead of cat</small></p> -->
+        <ul id="photos"></ul>
+    </div>
+    </div>
+
+    <!--  container end  -->
+
+
+    <!--  footer begin -->
+
+    <footer id="footer">
+        <p class="nav-center">&copy; 2014 flickrpics. All rights reserved.</p>
+    </footer>
+
+    <!--  footer end -->
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="js/getPics.js" type="text/javascript"></script>
+    <script src="js/flickr.js" type="text/javascript"></script>
+    <script src="js/container.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>

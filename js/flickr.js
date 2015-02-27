@@ -1,48 +1,107 @@
-$(document).ready(function(){
-	
-var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+// Begin code for search pics  //
+var searchPictures = function() {
 
-$('form').submit(function(event){
-	var $searchField = $("#search");
+    var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $('form').submit(function(event) {
 
-	event.preventDefault();
+        var $searchField = $("#search");
 
-	var animal = $searchField.val();
-	var flickrOptions = {
-	tags: animal,
-	format: "json"
-	}
 
-	var $searchField = $('#search');
-	var animal = $searchField.val();
 
-	var flickrOptions = {
-      	tags: animal,
-        format: "json"
-    	};
+        event.preventDefault();
+        var animal = $searchField.val();
+        var flickrOptions = {
+            tags: animal,
+            format: "json"
+        }
 
-	function flickrImages(data){
-		var photoHTML = "";
-		if (data.items.length > 0) {
-			photoHTML = '<ul>';
-			$.each(data.items, function(i, photos){
-			photoHTML += '<li class="col-sm-3 col-sm-3">';
-			photoHTML += '<a href=" ' + photos.link + ' " class="image">';
-			photoHTML += '<img src=" ' + photos.media.m + ' ">';
-			photoHTML += '</a>';
-			photoHTML += '</li>';
-			});
+        var animal = $searchField.val();
 
-		} else {
-		photoHTML =  photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search word: ' + animal + '.</p>'
-		}
+        var flickrOptions = {
+            tags: animal,
+            format: "json"
+        };
 
-		photoHTML += '</ul>';
+        function flickrImages(data) {
+            var photoHTML = "";
+            if (data.items.length > 0) {
+                photoHTML = '<ul>';
+                $.each(data.items, function(i, photos) {
+                    photoHTML += '<li class="col-sm-3 col-sm-3">';
+                    photoHTML += '<a href=" ' + photos.link + ' " class="image">';
+                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '</a>';
+                    photoHTML += '</li>';
+                });
 
-		$("#photos").html(photoHTML);
-		}
+            } else {
+                photoHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search word: ' + animal + '.</p>'
+            }
 
-		$.getJSON(flickrAPI, flickrOptions, flickrImages );
-	});
-});
+            photoHTML += '</ul>';
 
+            $("#photos").html(photoHTML);
+        }
+
+        $.getJSON(flickrAPI, flickrOptions, flickrImages);
+    });
+}
+
+// End code for search pics begin //
+
+////////////////////////////////////
+///////////////////////////////////
+
+//Begin code for friends pics  //
+
+var friendsPictures = function() {
+
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d&user_id=29096781@N02?jsoncallback=?";
+    $('form').submit(function(event) {
+
+        var $searchField = $("#search");
+
+        event.preventDefault();
+        var animal = $searchField.val();
+        var flickrOptions = {
+            tags: animal,
+            format: "json"
+        }
+
+        var $searchField = $('#search');
+        var animal = $searchField.val();
+
+        var flickrOptions = {
+            tags: animal,
+            tagmode: "all",
+            format: "json"
+        };
+
+        function flickrImages(data) {
+            var photoHTML = "";
+            if (data.items.length > 0) {
+                photoHTML = '<ul>';
+                $.each(data.items, function(i, photos) {
+                    photoHTML += '<li class="col-sm-3 col-sm-3">';
+                    photoHTML += '<a href=" ' + photos.link + ' " class="image">';
+                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '</a>';
+                    photoHTML += '</li>';
+                });
+
+            } else {
+                photoHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search word: ' + animal + '.</p>'
+            }
+
+            photoHTML += '</ul>';
+
+            $("#photos").html(photoHTML);
+        }
+
+        $.getJSON(flickrAPI, flickrOptions, flickrImages);
+    });
+}
+
+// End code for friends pics begin //
+////////////////////////////////////
+///////////////////////////////////
