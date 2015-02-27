@@ -46,6 +46,9 @@ $friendsPicsFormHTML += '</div>';
 $friendsPicsFormHTML += '</form>';
 // end ajax for friends pics
 
+
+// begin ajax for friends pics
+
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
 $favoritesHTML += '<h1>friends fav pics</h1>';
@@ -53,6 +56,21 @@ $favoritesHTML += '<article>';
 $favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s name and find their favorite photos.</p>';
 $favoritesHTML += '</article>';
 $favoritesHTML += '</section>';
+
+var $favoritesPicsFormHTML = " ";
+$favoritesPicsFormHTML += '<form class="navbar-form navbar-center" role="search">';
+$favoritesPicsFormHTML += '<div class="form-group">';
+$favoritesPicsFormHTML += '<label for="search"></label>';
+$favoritesPicsFormHTML += '<div class="form-group">';
+$favoritesPicsFormHTML += '<input type="search" class="form-control" id="search" name="search" placeholder="Favorite Pics">';
+$favoritesPicsFormHTML += '<button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$favoritesPicsFormHTML += '<span class="glyphicon glyphicon-search">Search </span>';
+$favoritesPicsFormHTML += '</button>';
+$favoritesPicsFormHTML += '</div>';
+$favoritesPicsFormHTML += '</div>';
+$favoritesPicsFormHTML += '</form>';
+
+// end ajax for friends pics
 
 var $aboutHTML = " ";
 $aboutHTML += '<section>';
@@ -75,6 +93,7 @@ $("#friendsPics").click(function() {
 
 $("#favorites").click(function() {
     document.getElementById("toFill").innerHTML = $favoritesHTML;
+    document.getElementById("form").innerHTML = $favoritesPicsFormHTML;
 });
 
 $("#about").click(function() {
