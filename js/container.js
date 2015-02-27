@@ -14,8 +14,8 @@ $searchPicsFormHTML += '<div class="form-group">';
 $searchPicsFormHTML += '<label for="search"></label>';
 $searchPicsFormHTML += '<div class="form-group">';
 $searchPicsFormHTML += '<input type="search" class="form-control" id="search" name="search" placeholder="Search Pics">';
-$searchPicsFormHTML += '<button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-$searchPicsFormHTML += '<span class="glyphicon glyphicon-search">Search </span>';
+$searchPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$searchPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
 $searchPicsFormHTML += '</button>';
 $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</div>';
@@ -37,9 +37,9 @@ $friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="search">'
 $friendsPicsFormHTML += '<div class="form-group">';
 $friendsPicsFormHTML += '<label for="search"></label>';
 $friendsPicsFormHTML += '<div class="form-group">';
-$friendsPicsFormHTML += '<input type="search" class="form-control" id="search" name="search" placeholder="Friends Pics">';
-$friendsPicsFormHTML += '<button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-$friendsPicsFormHTML += '<span class="glyphicon glyphicon-search">Search </span>';
+$friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="search" placeholder="Friends Pics">';
+$friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
 $friendsPicsFormHTML += '</button>';
 $friendsPicsFormHTML += '</div>';
 $friendsPicsFormHTML += '</div>';
@@ -48,7 +48,6 @@ $friendsPicsFormHTML += '</form>';
 
 
 // begin ajax for friends pics
-
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
 $favoritesHTML += '<h1>friends fav pics</h1>';
@@ -63,15 +62,16 @@ $favoritesPicsFormHTML += '<div class="form-group">';
 $favoritesPicsFormHTML += '<label for="search"></label>';
 $favoritesPicsFormHTML += '<div class="form-group">';
 $favoritesPicsFormHTML += '<input type="search" class="form-control" id="search" name="search" placeholder="Favorite Pics">';
-$favoritesPicsFormHTML += '<button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-$favoritesPicsFormHTML += '<span class="glyphicon glyphicon-search">Search </span>';
+$favoritesPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$favoritesPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
 $favoritesPicsFormHTML += '</button>';
 $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</form>';
-
 // end ajax for friends pics
 
+
+// begin ajax for about HTML
 var $aboutHTML = " ";
 $aboutHTML += '<section>';
 $aboutHTML += '<h1>about flickrpics</h1>';
@@ -79,7 +79,23 @@ $aboutHTML += '<article>';
 $aboutHTML += '<p class="lead">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most recent posts on flickr by category, friends or your friend’s favorites.</p>';
 $aboutHTML += '</article>';
 $aboutHTML += '</section>';
+// end ajax for about HTML
 
+//begin ajax for home
+var $home = " ";
+$home += '<section>';
+$home += '<h1>Search away</h1>';
+$home += '<article>';
+$home += '<p class="lead">Click on search pics, friends pics or favorites and then enter you search term....</p>';
+$home += '</article>';
+$home += '</section>';
+// end ajax for about home
+
+
+
+$("#home").click(function(){
+	 document.getElementById("toFill").innerHTML = $home;
+});
 
 $("#searchPics").click(function() {
     document.getElementById("toFill").innerHTML = $searchPicsHTML;

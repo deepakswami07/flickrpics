@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#friendsPics").click(function() {
+    	console.log("hello");
         $(this).text() === "Friends Pics";
         return friendsPictures();
     });

@@ -6,8 +6,6 @@ var searchPictures = function() {
 
         var $searchField = $("#search");
 
-
-
         event.preventDefault();
         var animal = $searchField.val();
         var flickrOptions = {
@@ -56,7 +54,9 @@ var searchPictures = function() {
 
 var friendsPictures = function() {
 
-    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d&user_id=29096781@N02?jsoncallback=?";
+    var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
+    
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=";
     $('form').submit(function(event) {
 
         var $searchField = $("#search");
