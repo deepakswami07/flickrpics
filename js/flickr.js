@@ -56,13 +56,13 @@ var friendsPictures = function() {
 
     var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
     
-    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=";
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key='+ apiKey +'jsoncallback? ";
     $('form').submit(function(event) {
 
         var $searchField = $("#search");
 
         event.preventDefault();
-        var animal = $searchField.val();
+        var userId = $searchField.val();
         var flickrOptions = {
             tags: animal,
             format: "json"
