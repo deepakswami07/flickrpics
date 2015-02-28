@@ -33,11 +33,11 @@ $friendsPicsHTML += '</article>';
 $friendsPicsHTML += '</section>';
 
 var $friendsPicsFormHTML = " ";
-$friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="search">';
+$friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="searchFriends">';
 $friendsPicsFormHTML += '<div class="form-group">';
-$friendsPicsFormHTML += '<label for="search"></label>';
+$friendsPicsFormHTML += '<label for="searchFriends"></label>';
 $friendsPicsFormHTML += '<div class="form-group">';
-$friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="search" placeholder="Friends Pics">';
+$friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="earchFriends" placeholder="Friends Pics">';
 $friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
 $friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
 $friendsPicsFormHTML += '</button>';
