@@ -52,7 +52,7 @@ var friendsPictures = function() {
 
     $('form').submit(function(event) {
 
-    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key= + apiKey + &user_id= + userId + &per_page=20&page=4&format=json";
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key= + apiKey + &user_id= + userId + &per_page=20&page=4&format=json&jsoncallback=?";
 
         event.preventDefault();
         var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
@@ -63,7 +63,7 @@ var friendsPictures = function() {
             api_key: apiKey,
             user_id: userId,
             safe_search: 1,
-            per_page: 3,
+            per_page: 20,
             format: "json"
         }
 
@@ -71,14 +71,16 @@ var friendsPictures = function() {
             var friendsHTML = "";
             friendsHTML += '<ul>';
 
-            $.each(data.photoset.photo, function(i,item) {
+            $.each(data.photos.photo, function(i,item) {
+             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
             friendsHTML += '<li class="col-sm-3 col-sm-3">';
-            friendsHTML += '<img src=" ' + item.id + ' ">';
+            friendsHTML += '<img src=" ' + photoURL + ' " class="images">';
+            // friendsHTML += '<img src=" ' + item.id + ' ">';
             friendsHTML += '</li>';
             });
 
             friendsHTML += '</ul>';
-            $("#photos").html(photoHTML);
+            $("#photos").html(friendsHTML);
         }
     
         $.getJSON(flickrAPI, flickrOptions, flickrImages);
