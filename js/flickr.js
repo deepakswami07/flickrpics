@@ -49,46 +49,40 @@ var searchPictures = function() {
 
 var friendsPictures = function() {
 
-    var flickrAPI = "https://api.flickr.com/services/rest/??&method=flickr.people.getPublicPhotos&jsoncallback=?";
 
     $('form').submit(function(event) {
 
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key= + apiKey + &user_id= + userId + &per_page=20&page=4&format=json";
 
         event.preventDefault();
-        
         var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
         var $searchField = $("#searchFriends");
         var userId = $searchField.val();
            
         var flickrOptions = {
             api_key: apiKey,
-            user_id: userId ,
+            user_id: userId,
             safe_search: 1,
+            per_page: 3,
             format: "json"
-        };
-        console.log(flickrOptions);
-        function flickrImages(data) {
-            var photoHTML = "";
-            if (data.photos.length > 0) {
-                photoHTML = '<ul>';
-                $.each(data.photos, function(i, photos) {
-                    photoHTML += '<li class="col-sm-3 col-sm-3">';
-                    photoHTML += '<a href=" ' + photos.owner + ' " class="image">';
-                    photoHTML += '<img src=" ' + photos.title + ' ">';
-                    photoHTML += '</a>';
-                    photoHTML += '</li>';
-                });
-
-            } else {
-                photoHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search word: ' + animal + '.</p>'
-            }
-
-            photoHTML += '</ul>';
-
-            $("#photos").html(photoHTML);
         }
 
+        function flickrImages(data) {
+            var friendsHTML = "";
+            friendsHTML += '<ul>';
+
+            $.each(data.photoset.photo, function(i,item) {
+            friendsHTML += '<li class="col-sm-3 col-sm-3">';
+            friendsHTML += '<img src=" ' + item.id + ' ">';
+            friendsHTML += '</li>';
+            });
+
+            friendsHTML += '</ul>';
+            $("#photos").html(photoHTML);
+        }
+    
         $.getJSON(flickrAPI, flickrOptions, flickrImages);
+        console.log($.getJSON(flickrAPI, flickrOptions, flickrImages));
     });
 }
 
