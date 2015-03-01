@@ -74,6 +74,8 @@ var friendsPictures = function() {
             $.each(data.photos.photo, function(i,item) {
              var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
             friendsHTML += '<li class="col-sm-3 col-sm-3">';
+             https://www.flickr.com/photos/brondbysupport/16687566685/ 
+            friendsHTML += '<a href="https://www.flickr.com/photos/ ' + item.id + ' " class="image">';
             friendsHTML += '<img src=" ' + photoURL + ' " class="images">';
             // friendsHTML += '<img src=" ' + item.id + ' ">';
             friendsHTML += '</li>';
