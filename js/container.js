@@ -37,7 +37,7 @@ $friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="searchFri
 $friendsPicsFormHTML += '<div class="form-group">';
 $friendsPicsFormHTML += '<label for="searchFriends"></label>';
 $friendsPicsFormHTML += '<div class="form-group">';
-$friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="earchFriends" placeholder="Friends Pics">';
+$friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="searchFriends" placeholder="Friends Pics">';
 $friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
 $friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
 $friendsPicsFormHTML += '</button>';
@@ -57,11 +57,11 @@ $favoritesHTML += '</article>';
 $favoritesHTML += '</section>';
 
 var $favoritesPicsFormHTML = " ";
-$favoritesPicsFormHTML += '<form class="navbar-form navbar-center" role="search">';
+$favoritesPicsFormHTML += '<form class="navbar-form navbar-center" role="searchFriendsFav">';
 $favoritesPicsFormHTML += '<div class="form-group">';
-$favoritesPicsFormHTML += '<label for="search"></label>';
+$favoritesPicsFormHTML += '<label for="searchFriendsFav"></label>';
 $favoritesPicsFormHTML += '<div class="form-group">';
-$favoritesPicsFormHTML += '<input type="search" class="form-control" id="search" name="search" placeholder="Favorite Pics">';
+$favoritesPicsFormHTML += '<input type="search" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="Favorite Pics">';
 $favoritesPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
 $favoritesPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
 $favoritesPicsFormHTML += '</button>';
