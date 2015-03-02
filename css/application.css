@@ -81,7 +81,11 @@ a img {
 }
 
 
-#noMatch#footer {
+#footer {
+  text-align: center;
+}
+
+#noMatch {
   text-align: center;
 }
 
