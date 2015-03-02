@@ -69,24 +69,29 @@ var friendsPictures = function() {
 
         function flickrImages(data) {
             var friendsHTML = "";
-            friendsHTML += '<ul>';
-
-            $.each(data.photos.photo, function(i,item) {
-             var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
-            friendsHTML += '<li class="col-sm-3 col-sm-3">';
-            friendsHTML += '<a href="https://www.flickr.com/photos/' + userId + '/' + item.id + ' " class="image">';
-            friendsHTML += '<img src=" ' + photoURL + ' " class="images">';
+            if (data.photos.photo.length > 0){
+                friendsHTML += '<ul>';
+                $.each(data.photos.photo, function(i,item) {
+                    var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
+                    friendsHTML += '<li class="col-sm-3 col-sm-3">';
+                    friendsHTML += '<a href="https://www.flickr.com/photos/' + userId + '/' + item.id + ' " class="image">';
+                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
             // friendsHTML += '<img src=" ' + item.id + ' ">';
-            friendsHTML += '</li>';
-            });
+                    friendsHTML += '</li>';
+                });
+
+            } else {
+               friendsHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search the user ID: ' + userId + '.</p>'
+            }
 
             friendsHTML += '</ul>';
+
             $("#photos").html(friendsHTML);
         }
-    
+
         $.getJSON(flickrAPI, flickrOptions, flickrImages);
-        console.log($.getJSON(flickrAPI, flickrOptions, flickrImages));
     });
+
 }
 
 // End code for friends pics begin //
@@ -97,6 +102,45 @@ var friendsPictures = function() {
 // begin code for favorite pics //
 
 var favoritePictures = function() {
+    $('form').submit(function(event) {
+
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&api_key= + apiKey + &user_id= + userId + &per_page=20&format=json&jsoncallback=?";
+
+        event.preventDefault();
+        var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
+        var $searchField = $("#searchFriendsFav");
+        var userId = $searchField.val();
+           
+        var flickrOptions = {
+            api_key: apiKey,
+            user_id: userId,
+            per_page: 20,
+            format: "json"
+        }
+
+        function flickrImages(data) {
+            var friendsFavHTML = "";
+
+            if (data.photos.photo.length > 0){
+                friendsFavHTML += '<ul>';
+                $.each(data.photos.photo, function(i,item) {
+                 var friendsFavURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
+                friendsFavHTML += '<li class="col-sm-3 col-sm-3">';
+                friendsFavHTML += '<a href="https://www.flickr.com/photos/' + item.owner + '/' + item.id + ' " class="image">';
+                friendsFavHTML += '<img src=" ' + friendsFavURL + ' " class="images">';
+                friendsFavHTML += '</li>';
+                });
+            } else {
+                friendsFavHTML = '<p id="noMatch" class="lead text-danger"> The user with: ' + userId + ' has no favorite pictures.</p>'
+
+            }
+            friendsFavHTML += '</ul>';
+            $("#photos").html(friendsFavHTML);
+        }
+    
+        $.getJSON(flickrAPI, flickrOptions, flickrImages);
+        console.log($.getJSON(flickrAPI, flickrOptions, flickrImages));
+    });
 
 }
 
