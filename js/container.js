@@ -83,8 +83,8 @@ $aboutHTML += '</section>';
 
 //begin ajax for home
 var $home = " ";
-$home += '<section>';
-$home += '<h1>Search away</h1>';
+$home += '<section id="toFill">';
+$home += '<h1>search away....</h1>';
 $home += '<article>';
 $home += '<p class="lead">Click on search pics, friends pics or favorites and then enter you search term....</p>';
 $home += '</article>';
