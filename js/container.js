@@ -7,8 +7,6 @@ $picturesHTML += '<p class="lead">Click on the generate pics button to see recen
 $picturesHTML += '</article>';
 $picturesHTML += '</section>';
 
-
-
 var $picturesFormHTML = " ";
 $picturesFormHTML += '<form class="navbar-form navbar-center" role="picutres">';
 $picturesFormHTML += '<div class="form-group">';
@@ -22,9 +20,10 @@ $picturesFormHTML += '</div>';
 $picturesFormHTML += '</form>';
 
 
+// end ajax for random pics
 
 
-// // begin ajax for search pics
+// begin ajax for search pics
 var $searchPicsHTML = " ";
 $searchPicsHTML += '<section>';
 $searchPicsHTML += '<h1>search pics</h1>';
@@ -45,38 +44,7 @@ $searchPicsFormHTML += '</button>';
 $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</form>';
-// // end ajax for search pics
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// end ajax for search pics
 
 
 
@@ -90,24 +58,24 @@ $friendsPicsHTML += '<p class="lead">Too busy to joint Flickr but you want to st
 $friendsPicsHTML += '</article>';
 $friendsPicsHTML += '</section>';
 
-    // begin ajax for friends pics by ID
+    //begin ajax for friends pics by ID    
     // var $friendsPicsFormHTML = " ";
-    // $friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="searchFriends">';
+    // $friendsPicsFormHTML += '<form style="display: inline" class="navbar-form navbar-center" role="searchFriends">';
     // $friendsPicsFormHTML += '<div class="form-group">';
     // $friendsPicsFormHTML += '<label for="searchFriends"></label>';
     // $friendsPicsFormHTML += '<div class="form-group">';
-    // $friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="searchFriends" placeholder="Friends Pics">';
+    // $friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="searchFriends" placeholder="xxxxxxxx@xxx">';
     // $friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-    // $friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search id </span>';
+    // $friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search using id</span>';
     // $friendsPicsFormHTML += '</button>';
     // $friendsPicsFormHTML += '</div>';
     // $friendsPicsFormHTML += '</div>';
     // $friendsPicsFormHTML += '</form>';
-    // end ajax for friends pics by ID
+    //end ajax for friends pics by ID
 
-    // begin ajax for friends pics by username
+    //begin ajax for friends pics by username
     var $friendsPicsFormNameHTML = " ";
-    $friendsPicsFormNameHTML += '<form class="navbar-form navbar-center" role="searchFriendsName">';
+    $friendsPicsFormNameHTML += '<form style="display: inline" class="navbar-form navbar-center" role="searchFriendsName">';
     $friendsPicsFormNameHTML += '<div class="form-group">';
     $friendsPicsFormNameHTML += '<label for="searchFriendsName"></label>';
     $friendsPicsFormNameHTML += '<div class="form-group">';
@@ -118,17 +86,23 @@ $friendsPicsHTML += '</section>';
     $friendsPicsFormNameHTML += '</div>';
     $friendsPicsFormNameHTML += '</div>';
     $friendsPicsFormNameHTML += '</form>';
-    // begin ajax for friends pics by username
+    //begin ajax for friends pics by username
 
 // end ajax for friends pics
 
 
-// begin ajax for friends pics
+
+
+
+
+
+
+// begin ajax for friends favorite pics
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
 $favoritesHTML += '<h1>friends fav pics</h1>';
 $favoritesHTML += '<article>';
-$favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s name and find their favorite photos.</p>';
+$favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s userid and find their favorite photos.</p>';
 $favoritesHTML += '</article>';
 $favoritesHTML += '</section>';
 
@@ -144,7 +118,7 @@ $favoritesPicsFormHTML += '</button>';
 $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</form>';
-// end ajax for friends pics
+// end ajax for favorite pics
 
 
 // begin ajax for about HTML
@@ -179,13 +153,6 @@ $("#home").click(function(){
 	 $('form').show();
 });
 
-$("#about").click(function() {
-    document.getElementById("toFill").innerHTML = $aboutHTML;
-    $('form').hide();
-	$('form').show();
-});
-
-
 $("#pictures").click(function() {
     document.getElementById("toFill").innerHTML = $picturesHTML;
     document.getElementById("form").innerHTML = $picturesFormHTML;
@@ -207,6 +174,14 @@ $("#favorites").click(function() {
     document.getElementById("toFill").innerHTML = $favoritesHTML;
     document.getElementById("form").innerHTML = $favoritesPicsFormHTML;
 });
+
+$("#about").click(function() {
+    document.getElementById("toFill").innerHTML = $aboutHTML;
+    $('form').hide();
+    $('form').show();
+});
+
+
 
 
 
