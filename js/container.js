@@ -1,12 +1,37 @@
-// begin ajax for search pics
+// begin ajax for random pics
+var $picturesHTML = " ";
+$picturesHTML += '<section>';
+$picturesHTML += '<h1>generate random pictures</h1>';
+$picturesHTML += '<article>';
+$picturesHTML += '<p class="lead">Click on the generate pics button to see recent photos that have been posted on Flickr.</p>';
+$picturesHTML += '</article>';
+$picturesHTML += '</section>';
+
+
+
+var $picturesFormHTML = " ";
+$picturesFormHTML += '<form class="navbar-form navbar-center" role="picutres">';
+$picturesFormHTML += '<div class="form-group">';
+$picturesFormHTML += '<label for="picutres"></label>';
+$picturesFormHTML += '<div class="form-group">';
+$picturesFormHTML += ' <button id="submit" type="submit" value="picutres" class="btn btn-default navbar-btn">';
+$picturesFormHTML += '<span class="glyphicon glyphicon-picutres"> Generate pics</span>';
+$picturesFormHTML += '</button>';
+$picturesFormHTML += '</div>';
+$picturesFormHTML += '</div>';
+$picturesFormHTML += '</form>';
+
+
+
+
+// // begin ajax for search pics
 var $searchPicsHTML = " ";
 $searchPicsHTML += '<section>';
 $searchPicsHTML += '<h1>search pics</h1>';
 $searchPicsHTML += '<article>';
-$searchPicsHTML += '<p class="lead">Type in a search term to find the most recent photos that  have been posted on Flickr.</p>';
+$searchPicsHTML += '<p class="lead">Type in a search term to find the most recent photos that have been posted on Flickr.</p>';
 $searchPicsHTML += '</article>';
 $searchPicsHTML += '</section>';
-
 
 var $searchPicsFormHTML = " ";
 $searchPicsFormHTML += '<form class="navbar-form navbar-center" role="search">';
@@ -20,7 +45,40 @@ $searchPicsFormHTML += '</button>';
 $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</form>';
-// end ajax for search pics
+// // end ajax for search pics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // begin ajax for friends pics
@@ -32,18 +90,36 @@ $friendsPicsHTML += '<p class="lead">Too busy to joint Flickr but you want to st
 $friendsPicsHTML += '</article>';
 $friendsPicsHTML += '</section>';
 
-var $friendsPicsFormHTML = " ";
-$friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="searchFriends">';
-$friendsPicsFormHTML += '<div class="form-group">';
-$friendsPicsFormHTML += '<label for="searchFriends"></label>';
-$friendsPicsFormHTML += '<div class="form-group">';
-$friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="searchFriends" placeholder="Friends Pics">';
-$friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-$friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search </span>';
-$friendsPicsFormHTML += '</button>';
-$friendsPicsFormHTML += '</div>';
-$friendsPicsFormHTML += '</div>';
-$friendsPicsFormHTML += '</form>';
+    // begin ajax for friends pics by ID
+    // var $friendsPicsFormHTML = " ";
+    // $friendsPicsFormHTML += '<form class="navbar-form navbar-center" role="searchFriends">';
+    // $friendsPicsFormHTML += '<div class="form-group">';
+    // $friendsPicsFormHTML += '<label for="searchFriends"></label>';
+    // $friendsPicsFormHTML += '<div class="form-group">';
+    // $friendsPicsFormHTML += '<input type="search" class="form-control" id="searchFriends" name="searchFriends" placeholder="Friends Pics">';
+    // $friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+    // $friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search id </span>';
+    // $friendsPicsFormHTML += '</button>';
+    // $friendsPicsFormHTML += '</div>';
+    // $friendsPicsFormHTML += '</div>';
+    // $friendsPicsFormHTML += '</form>';
+    // end ajax for friends pics by ID
+
+    // begin ajax for friends pics by username
+    var $friendsPicsFormNameHTML = " ";
+    $friendsPicsFormNameHTML += '<form class="navbar-form navbar-center" role="searchFriendsName">';
+    $friendsPicsFormNameHTML += '<div class="form-group">';
+    $friendsPicsFormNameHTML += '<label for="searchFriendsName"></label>';
+    $friendsPicsFormNameHTML += '<div class="form-group">';
+    $friendsPicsFormNameHTML += '<input type="search" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="mypics">';
+    $friendsPicsFormNameHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+    $friendsPicsFormNameHTML += '<span class="glyphicon glyphicon-search"> Search name</span>';
+    $friendsPicsFormNameHTML += '</button>';
+    $friendsPicsFormNameHTML += '</div>';
+    $friendsPicsFormNameHTML += '</div>';
+    $friendsPicsFormNameHTML += '</form>';
+    // begin ajax for friends pics by username
+
 // end ajax for friends pics
 
 
@@ -86,10 +162,14 @@ var $home = " ";
 $home += '<section id="toFill">';
 $home += '<h1>search away....</h1>';
 $home += '<article>';
-$home += '<p class="lead">Click on search pics, friends pics or favorites and then enter you search term....</p>';
+$home += '<p class="lead">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....</p>';
 $home += '</article>';
 $home += '</section>';
 // end ajax for about home
+
+
+
+
 
 
 
@@ -105,6 +185,12 @@ $("#about").click(function() {
 	$('form').show();
 });
 
+
+$("#pictures").click(function() {
+    document.getElementById("toFill").innerHTML = $picturesHTML;
+    document.getElementById("form").innerHTML = $picturesFormHTML;
+});
+
 $("#searchPics").click(function() {
     document.getElementById("toFill").innerHTML = $searchPicsHTML;
     document.getElementById("form").innerHTML = $searchPicsFormHTML;
@@ -112,7 +198,9 @@ $("#searchPics").click(function() {
 
 $("#friendsPics").click(function() {
     document.getElementById("toFill").innerHTML = $friendsPicsHTML;
-    document.getElementById("form").innerHTML = $friendsPicsFormHTML;
+    // document.getElementById("form").innerHTML = $friendsPicsFormHTML;
+    document.getElementById("form1").innerHTML = $friendsPicsFormNameHTML;
+    console.log("hello");
 });
 
 $("#favorites").click(function() {
