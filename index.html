@@ -23,7 +23,7 @@
         <div class="masthead">
             <header "page-header">
                 <ul class="nav nav-pills pull-right">
-                    <li><a class="btn btn-default btn-lg" href="#"><span class="glyphicon glyphicon-user"></span> Signup</a>
+                    <li><a  data-toggle="modal" class="btn btn-default btn-lg" href="#signup"><span class="glyphicon glyphicon-user"></span> Signup</a>
                     </li>
                 </ul>
                 <h1 class="text-muted">Flickrpics</h1>
@@ -74,7 +74,7 @@
 
         <!--  navbar end    -->
 
-        <!--  contact modal begin -->
+        <!--  begin contact modal -->
         <div class="modal fade" id="contact" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -112,13 +112,58 @@
                             <a class="btn btn-default" data-dismiss="modal">Close</a>
                             <button type="submit" class="btn btn-primary" data-dismiss="modal">Send</button>
                         </div>
-
                     </form>
+
                 </div>
             </div>
         </div>
         <!--  end contact modal  -->
 
+
+        <!--  begin signup modal -->
+        <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <form class="form-horizontal">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4><strong>Register</strong></h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="email" class="col-md-2 control-label"></label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="email" data-required="required" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="username" class="col-md-2 control-label"></label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="username" data-required="required" placeholder="username">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="col-md-2 control-label"></label>
+                                <div class="col-md-6">
+                                    <input type="password" class="form-control" id="email" data-required="required" placeholder="password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <a class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Send</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <!--  end signup modal  -->
 
         <!--  search form begin  -->
 
