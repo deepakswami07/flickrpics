@@ -40,17 +40,17 @@ $(document).ready(function() {
 
 
 
-$("#submit").click(function(event){
-		event.preventDefault()
-		var searchVal = $("#search").val();
-		console.log(searchVal);
-		if (searchVal.length > 0) {
-			console.log("enter search term");
-		} else {
-			console.log("hello");
-		}
+// $("#submit").click(function(event){
+// 		event.preventDefault()
+// 		var searchVal = $("#search").val();
+// 		console.log(searchVal);
+// 		if (searchVal.length > 0) {
+// 			console.log("enter search term");
+// 		} else {
+// 			console.log("hello");
+// 		}
 
-	});
+// 	});
 
 
 
