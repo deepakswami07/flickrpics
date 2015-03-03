@@ -34,16 +34,9 @@ var pictures = function() {
         $.getJSON(flickrAPI, flickrOptions, flickrImages);
     });
 }
-
 // End code for search pics begin //
-
-
-
-
-
-
-
-
+///////////////////////////////////
+//////////////////////////////////
 
 
 // Begin code for search pics  //
@@ -86,15 +79,13 @@ var searchPictures = function() {
         $.getJSON(flickrAPI, flickrOptions, flickrImages);
     });
 }
-
 // End code for search pics begin //
-
 ////////////////////////////////////
 ///////////////////////////////////
 
+
+
 //Begin code for friends pics by id //
-
-
 // var friendsPicturesId = function() {
 
 
@@ -153,7 +144,7 @@ var friendsPicturesName = function() {
 
     $('form').submit(function(event) {
 
-    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key= + apiKey + &text= + username + &per_page=20&page=4&format=json&jsoncallback=?";
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key= + apiKey + &text= + username + &per_page=20&format=json&jsoncallback=?";
     
         event.preventDefault();
         var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
