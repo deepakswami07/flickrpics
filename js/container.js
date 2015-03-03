@@ -62,7 +62,7 @@ $friendsPicsHTML += '</section>';
 
     //begin ajax for friends pics by ID    
     var $friendsPicsFormHTML = " ";
-    $friendsPicsFormHTML += '<form style="display: inline" class="navbar-form navbar-center" role="searchFriends">';
+    $friendsPicsFormHTML += '<form style="display: inline" class="navbar-form navbar-center form-inline" role="searchFriends">';
     $friendsPicsFormHTML += '<div class="form-group">';
     $friendsPicsFormHTML += '<label for="searchFriends"></label>';
     $friendsPicsFormHTML += '<div class="form-group">';
@@ -77,7 +77,7 @@ $friendsPicsHTML += '</section>';
 
     //begin ajax for friends pics by username
     var $friendsPicsFormNameHTML = " ";
-    $friendsPicsFormNameHTML += '<form style="display: inline" class="navbar-form navbar-center" role="searchFriendsName">';
+    $friendsPicsFormNameHTML += '<form style="display: inline" class="navbar-form navbar-center form-inline" role="searchFriendsName">';
     $friendsPicsFormNameHTML += '<div class="form-group">';
     $friendsPicsFormNameHTML += '<label for="searchFriendsName"></label>';
     $friendsPicsFormNameHTML += '<div class="form-group">';
