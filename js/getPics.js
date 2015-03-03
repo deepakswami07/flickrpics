@@ -1,15 +1,32 @@
 $(document).ready(function() {
-    $("#searchPics").click(function() {
-        $(this).text() === "Search Pics";
-        return searchPictures();
+    $("#pictures").click(function() {
+        $(this).text() === "Generate pics";
+        return pictures();
     });
 });
 
 $(document).ready(function() {
+    $("#searchPics").click(function() {
+        $(this).text() === "Search";
+        return searchPictures();
+    });
+});
+
+
+// $(document).ready(function() {
+//     $("#friendsPics").click(function() {
+//         $(this).text() === "Friends Pics";
+//     	$(".image").hide();
+//         return friendsPicturesId();
+//     });
+// });
+
+
+$(document).ready(function() {
     $("#friendsPics").click(function() {
         $(this).text() === "Friends Pics";
-    	$(".image").hide();
-        return friendsPictures();
+        $(".image").hide();
+        return friendsPicturesName();
     });
 });
 
