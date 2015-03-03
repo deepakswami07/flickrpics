@@ -13,13 +13,13 @@ $(document).ready(function() {
 });
 
 
-// $(document).ready(function() {
-//     $("#friendsPics").click(function() {
-//         $(this).text() === "Friends Pics";
-//     	$(".image").hide();
-//         return friendsPicturesId();
-//     });
-// });
+$(document).ready(function() {
+    $("#friendsPics").click(function() {
+        $(this).text() === "Friends Pics";
+    	$(".image").hide();
+        return friendsPicturesId();
+    });
+});
 
 
 $(document).ready(function() {
@@ -49,7 +49,6 @@ $(document).ready(function() {
 // 		} else {
 // 			console.log("hello");
 // 		}
-
 // 	});
 
 
