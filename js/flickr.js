@@ -1,4 +1,52 @@
 // Begin code for search pics  //
+var pictures = function() {
+
+    var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $('form').submit(function(event) {
+
+        event.preventDefault();
+        console.log("hello");
+        var flickrOptions = {
+            format: "json"
+        };
+
+        function flickrImages(data) {
+            var photoHTML = "";
+            if (data.items.length > 0) {
+                photoHTML = '<ul>';
+                $.each(data.items, function(i, photos) {
+                    photoHTML += '<li class="col-sm-3 col-sm-3">';
+                    photoHTML += '<a href="' + photos.link + '" class="image">';
+                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '</a>';
+                    photoHTML += '</li>';
+                });
+
+            } else {
+                photoHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search word: ' + animal + '.</p>'
+            }
+
+            photoHTML += '</ul>';
+
+            $("#photos").html(photoHTML);
+        }
+
+        $.getJSON(flickrAPI, flickrOptions, flickrImages);
+    });
+}
+
+// End code for search pics begin //
+
+
+
+
+
+
+
+
+
+
+// Begin code for search pics  //
 var searchPictures = function() {
 
     var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
@@ -8,7 +56,7 @@ var searchPictures = function() {
 
         event.preventDefault();
         var animal = $searchField.val();
-        console.log(animal);
+        console.log("hello");
         var flickrOptions = {
             tags: animal,
             format: "json"
@@ -20,7 +68,7 @@ var searchPictures = function() {
                 photoHTML = '<ul>';
                 $.each(data.items, function(i, photos) {
                     photoHTML += '<li class="col-sm-3 col-sm-3">';
-                    photoHTML += '<a href=" ' + photos.link + ' " class="image">';
+                    photoHTML += '<a href="' + photos.link + '" class="image">';
                     photoHTML += '<img src=" ' + photos.media.m + ' ">';
                     photoHTML += '</a>';
                     photoHTML += '</li>';
@@ -44,28 +92,82 @@ var searchPictures = function() {
 ////////////////////////////////////
 ///////////////////////////////////
 
-//Begin code for friends pics  //
+//Begin code for friends pics by id //
 
 
-var friendsPictures = function() {
+// var friendsPicturesId = function() {
+
+
+//     $('form').submit(function(event) {
+
+//     var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key= + apiKey + &user_id= + userId + &per_page=20&page=4&format=json&jsoncallback=?";
+
+//         event.preventDefault();
+//         var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
+//         var $searchField = $("#searchFriends");
+//         var userId = $searchField.val();
+           
+//         var flickrOptions = {
+//             api_key: apiKey,
+//             user_id: userId,
+//             safe_search: 1,
+//             per_page: 20,
+//             format: "json"
+//         }
+
+//         function flickrImages(data) {
+//             var friendsHTML = "";
+//             if (data.photos.photo.length > 0){
+//                 friendsHTML += '<ul>';
+//                 $.each(data.photos.photo, function(i,item) {
+//                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
+//                     friendsHTML += '<li class="col-sm-3 col-sm-3">';
+//                     friendsHTML += '<a href="https://www.flickr.com/photos/' + userId + '/' + item.id + ' " class="image">';
+//                     friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
+//             // friendsHTML += '<img src=" ' + item.id + ' ">';
+//                     friendsHTML += '</li>';
+//                 });
+
+//             } else {
+//                friendsHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search the user ID: ' + userId + '.</p>'
+//             }
+
+//             friendsHTML += '</ul>';
+
+//             $("#photos").html(friendsHTML);
+//         }
+
+//         $.getJSON(flickrAPI, flickrOptions, flickrImages);
+//     });
+
+// }
+
+// End code for friends pics by id //
+////////////////////////////////////
+///////////////////////////////////
+
+
+//Begin code for friends pics by name //
+var friendsPicturesName = function() {
 
 
     $('form').submit(function(event) {
 
-    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key= + apiKey + &user_id= + userId + &per_page=20&page=4&format=json&jsoncallback=?";
-
+    var flickrAPI = "https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key= + apiKey + &text= + username + &per_page=20&page=4&format=json&jsoncallback=?";
+    
         event.preventDefault();
         var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
-        var $searchField = $("#searchFriends");
-        var userId = $searchField.val();
+        var $searchField = $("#searchFriendsName");
+        var username = $searchField.val();
            
         var flickrOptions = {
             api_key: apiKey,
-            user_id: userId,
-            safe_search: 1,
+            text: username,
+            safe_search: 1, 
             per_page: 20,
             format: "json"
         }
+        console.log(flickrOptions);
 
         function flickrImages(data) {
             var friendsHTML = "";
@@ -74,14 +176,14 @@ var friendsPictures = function() {
                 $.each(data.photos.photo, function(i,item) {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                     friendsHTML += '<li class="col-sm-3 col-sm-3">';
-                    friendsHTML += '<a href="https://www.flickr.com/photos/' + userId + '/' + item.id + ' " class="image">';
+                    friendsHTML += '<a href="https://www.flickr.com/photos/' + username + '/' + item.id + ' " class="image">';
                     friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
             // friendsHTML += '<img src=" ' + item.id + ' ">';
                     friendsHTML += '</li>';
                 });
 
             } else {
-               friendsHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search the user ID: ' + userId + '.</p>'
+               friendsHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search the name: ' + username + '.</p>'
             }
 
             friendsHTML += '</ul>';
@@ -93,14 +195,12 @@ var friendsPictures = function() {
     });
 
 }
-
-// End code for friends pics begin //
+// End code for friends pics by name//
 ////////////////////////////////////
 ///////////////////////////////////
 
 
 // begin code for favorite pics //
-
 var favoritePictures = function() {
     $('form').submit(function(event) {
 
