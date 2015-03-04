@@ -39,7 +39,40 @@ $(document).ready(function() {
 });
 
 
+//begin signup form
+var $signupPassword = $("#signupPassword");
+var $signupConfirmPassword = $("#signupConfirmPassword")
 
+function isSignupPasswordValid(){
+    return $signupPassword.val().length > 4;
+}
+
+function areSignupPasswordConfirmMatching(){
+    return $signupPassword.val() === $signupConfirmPassword.val();
+}
+
+$("#signupForm p").hide();
+
+//end signup form
+
+function checkSignupPassword(){
+    if( isSignupPasswordValid() ){
+        $signupPassword.next().hide();
+    } else {
+        $signupPassword.next().show();
+    }
+}
+
+function checkSignupConfirmPassword(){
+    if( areSignupPasswordConfirmMatching() ){
+        $signupConfirmPassword.next().hide();
+    } else {
+        $signupConfirmPassword.next().show();
+    }
+}
+
+$signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(checkSignupConfirmPassword);
+$signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfirmPassword);
 // $("#submit").click(function(event){
 // 		event.preventDefault()
 // 		var searchVal = $("#search").val();
@@ -51,7 +84,6 @@ $(document).ready(function() {
 // 		}
 // 	});
 
-///begin signup////
 
 
 

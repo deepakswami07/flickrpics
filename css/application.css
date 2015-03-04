@@ -18,7 +18,20 @@ form, #note {
 	text-align: center;
 }*/
 
-
+/*.signupMessage {
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1em;
+  text-align: center;
+  position: absolute;
+  background: #2F558E;*/
+ /* left: 105%;*/
+/*  top: -10px;
+  width: 160px;
+  padding: 7px 10px;
+  color: #fff;
+}
+*/
 ul li {
   list-style-type: none;
   text-align: center;
