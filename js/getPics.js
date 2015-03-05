@@ -19,16 +19,16 @@ $(document).ready(function() {
     $("#userID").click(function() {
         $(this).text() === "UserID";
     	$(".image").prev().hide();
-        return useridPicturesId();
+        return useridPictures();
     });
 });
 
 
 $(document).ready(function() {
-    $("#friendsPics").click(function() {
-        $(this).text() === "Friends Pics";
+    $("#username").click(function() {
+        $(this).text() === "Username";
        $(".image").prev().hide();
-        return friendsPicturesName();
+        return usernamePictures();
     });
 });
 
