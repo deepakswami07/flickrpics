@@ -177,7 +177,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
 
-                    <form class="form-horizontal">
+                    <form id="loginForm" class="form-horizontal">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h1><strong>flickrpics</strong></h1>
@@ -185,9 +185,10 @@
                         <div class="modal-body">
 
                             <div class="form-group">
-                                <label for="email" class="col-md-2 control-label"></label>
+                                <label for="loginEmail" class="col-md-2 control-label"></label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" id="email" data-required="required" placeholder="Email">
+                                    <input type="email" class="form-control" id="loginEmail" data-required="required" placeholder="Email">
+                                    <p class="emailMessage">Enter a valid email</p>
                                 </div>
                             </div>
 
