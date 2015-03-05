@@ -16,10 +16,10 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $("#friendsPics").click(function() {
-        $(this).text() === "Friends Pics";
+    $("#userID").click(function() {
+        $(this).text() === "UserID";
     	$(".image").prev().hide();
-        return friendsPicturesId();
+        return useridPicturesId();
     });
 });
 

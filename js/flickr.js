@@ -86,7 +86,7 @@ var searchPictures = function() {
 
 
 //Begin code for friends pics by id //
-var friendsPicturesId = function() {
+var useridPicturesId = function() {
 
 
     $('form').submit(function(event) {
