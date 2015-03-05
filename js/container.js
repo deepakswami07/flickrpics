@@ -27,7 +27,7 @@ $picturesFormHTML += '</form>';
 // begin ajax for search pics
 var $searchPicsHTML = " ";
 $searchPicsHTML += '<section>';
-$searchPicsHTML += '<h1>search pics</h1>';
+$searchPicsHTML += '<h1>search pics by topic</h1>';
 $searchPicsHTML += '<article>';
 $searchPicsHTML += '<p class="lead">Type in a search term to find the most recent photos that have been posted on Flickr.</p>';
 $searchPicsHTML += '</article>';
@@ -54,7 +54,7 @@ $searchPicsFormHTML += '</form>';
 // begin ajax for userid pics
 var $useridHTML = " ";
 $useridHTML += '<section>';
-$useridHTML += '<h1>friends pics</h1>';
+$useridHTML += '<h1>friends pics by userid</h1>';
 $useridHTML += '<article>';
 $useridHTML += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
 $useridHTML += '</article>';
@@ -77,26 +77,26 @@ $useridPicsFormHTML += '</form>';
 //////////////////////////
 
 //begin ajax for for username
-// var $usernamedHTML = " ";
-// $usernamedHTML += '<section>';
-// $usernamedHTML += '<h1>friends pics</h1>';
-// $usernamedHTML += '<article>';
-// $usernamedHTML += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
-// $usernamedHTML += '</article>';
-// $usernamedHTML += '</section>';
+var $usernameHTML = " ";
+$usernameHTML += '<section>';
+$usernameHTML += '<h1>friends pics by username</h1>';
+$usernameHTML += '<article>';
+$usernameHTML += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
+$usernameHTML += '</article>';
+$usernameHTML += '</section>';
 
-// var $usernameFormNameHTML = " ";
-// $usernameFormNameHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriendsName">';
-// $usernameFormNameHTML += '<div class="form-group">';
-// $usernameFormNameHTML += '<label for="searchFriendsName"></label>';
-// $usernameFormNameHTML += '<div class="form-group">';
-// $usernameFormNameHTML += '<input type="text" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="mypics">';
-// $usernameFormNameHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-// $usernameFormNameHTML += '<span class="glyphicon glyphicon-search"> Search name</span>';
-// $usernameFormNameHTML += '</button>';
-// $usernameFormNameHTML += '</div>';
-// $usernameFormNameHTML += '</div>';
-// $usernameFormNameHTML += '</form>';
+var $usernamePicsFormHTML = " ";
+$usernamePicsFormHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriendsName">';
+$usernamePicsFormHTML += '<div class="form-group">';
+$usernamePicsFormHTML += '<label for="searchFriendsName"></label>';
+$usernamePicsFormHTML += '<div class="form-group">';
+$usernamePicsFormHTML += '<input type="text" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="mypics">';
+$usernamePicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$usernamePicsFormHTML += '<span class="glyphicon glyphicon-search"> Search name</span>';
+$usernamePicsFormHTML += '</button>';
+$usernamePicsFormHTML += '</div>';
+$usernamePicsFormHTML += '</div>';
+$usernamePicsFormHTML += '</form>';
 //end ajax for friends pics by username
 ////////////////////////////
 ///////////////////////////
@@ -105,7 +105,7 @@ $useridPicsFormHTML += '</form>';
 // begin ajax for friends favorite pics
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
-$favoritesHTML += '<h1>friends fav pics</h1>';
+$favoritesHTML += '<h1>friends fav pics of user</h1>';
 $favoritesHTML += '<article>';
 $favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s userid and find their favorite photos.</p>';
 $favoritesHTML += '</article>';
@@ -136,6 +136,8 @@ $aboutHTML += '<article>';
 $aboutHTML += '<p class="lead">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most recent posts on flickr by category, friends or your friend’s favorites.</p>';
 $aboutHTML += '</article>';
 $aboutHTML += '</section>';
+
+var $aboutPicsFormHTML = " ";
 // end ajax for about HTML
 ///////////////////////////
 //////////////////////////
@@ -149,6 +151,8 @@ $home += '<article>';
 $home += '<p class="lead">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....</p>';
 $home += '</article>';
 $home += '</section>';
+
+var $homePicsFormHTML = " ";
 // end ajax for about home
 ///////////////////////////
 //////////////////////////
@@ -162,11 +166,11 @@ $("#userID").click(function() {
     document.getElementById("result").innerHTML = $useridPicsFormHTML;
 });
 
-// $("#friendsPics").click(function() {
-//     document.getElementById("toFill").innerHTML = $friendsPicsHTML;
-//     document.getElementById("result").innerHTML = $friendsPicsFormHTML;
-//     // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
-// });
+$("#username").click(function() {
+    document.getElementById("toFill").innerHTML = $usernameHTML;
+    document.getElementById("result").innerHTML = $usernamePicsFormHTML;
+    // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
+});
 
 $("#pictures").click(function() {
     document.getElementById("toFill").innerHTML = $picturesHTML;
@@ -186,10 +190,12 @@ $("#favorites").click(function() {
 
 $("#home").click(function(){
 	 document.getElementById("toFill").innerHTML = $home;
+     document.getElementById("result").innerHTML = $homePicsFormHTML;
 });
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
+    document.getElementById("result").innerHTML = $aboutPicsFormHTML;
 });
 // end append to HTML
 ////////////////////
