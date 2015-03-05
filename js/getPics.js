@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("#pictures").click(function() {
         $(this).text() === "Generate pics";
+        $(".image").prev().hide();
         return pictures();
     });
 });
@@ -8,6 +9,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#searchPics").click(function() {
         $(this).text() === "Search";
+        $(".image").prev().hide();
         return searchPictures();
     });
 });
@@ -16,7 +18,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#friendsPics").click(function() {
         $(this).text() === "Friends Pics";
-    	$(".image").hide();
+    	$(".image").prev().hide();
         return friendsPicturesId();
     });
 });
@@ -25,7 +27,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#friendsPics").click(function() {
         $(this).text() === "Friends Pics";
-        $(".image").hide();
+       $(".image").prev().hide();
         return friendsPicturesName();
     });
 });
@@ -33,7 +35,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#favorites").click(function() {
         $(this).text() === "Favorites";
-    	$(".image").hide();
+    	$(".image").prev().hide();
         return favoritePictures();
     });
 });
