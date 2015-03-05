@@ -45,6 +45,7 @@ $(document).ready(function() {
 var $signupPassword = $("#signupPassword");
 var $signupConfirmPassword = $("#signupConfirmPassword")
 var $signupEmail = $("#signupEmail");
+var $loginEmail = $("#loginEmail");
 
 function isSignupPasswordValid(){
     return $signupPassword.val().length > 4;
@@ -57,10 +58,12 @@ function areSignupPasswordConfirmMatching(){
 function isEmailValid(){
     var emailPattern = new RegExp(/(.+)@(.+){2,}\.(.+){2,}/);
     var email = $signupEmail.val();
+    var email = $loginEmail.val();
     return emailPattern.test(email);
 }
 
 $("#signupForm p").hide();
+$("#loginForm p").hide();
 
 function checkSignupPassword(){
     if( isSignupPasswordValid() ){
@@ -78,7 +81,7 @@ function checkSignupConfirmPassword(){
     }
 }
 
-function checkEmail(){
+function checkSignupEmail(){
     if( isEmailValid() ){
         $signupEmail.next().hide();
     } else {
@@ -86,35 +89,23 @@ function checkEmail(){
     }
 }
 
+function checkLoginEmail(){
+    if( isEmailValid() ){
+        $loginEmail.next().hide();
+    } else {
+        $loginEmail.next().show();
+    }
+}
 $signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(checkSignupConfirmPassword);
 $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfirmPassword);
-$signupEmail.focus(checkEmail).keyup(checkEmail);
-
-//begin email validation for register
-
+$signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
+$loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 
 
-
-
-//end signup passowrd/confirm password validation form
+//end signup/login passowrd/confirm password validation form
 /////////////////////////////
 ////////////////////////////
 
-
-
-
-// var booking_email = $('input[name=email]').val();
-
- // if( booking_email == '' || booking_email.indexOf('@') == -1 || booking_email.indexOf('.') == -1 ) {
-
- //   // perform my alert
-
- // }
-
- // indexOf("welcome")
-//end email validation for register
-//////////////////////////////////
-/////////////////////////////////
 
 // $("#submit").click(function(event){
 // 		event.preventDefault()
@@ -138,7 +129,7 @@ $signupEmail.focus(checkEmail).keyup(checkEmail);
 
 
 
-///end signup////
+
 
 
 
