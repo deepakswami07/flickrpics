@@ -148,41 +148,42 @@ $home += '</section>';
 
 /// begin append to HTML
 
-$("#home").click(function(){
-	 document.getElementById("toFill").innerHTML = $home;
-	 $('form').hide();
-     $('form1').hide();
-	 $('form').show();
-     $('form1').show();
+
+$("#friendsPics").click(function() {
+    document.getElementById("toFill").innerHTML = $friendsPicsHTML;
+    document.getElementById("result").innerHTML = $friendsPicsFormHTML;
+    // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
 });
 
 $("#pictures").click(function() {
     document.getElementById("toFill").innerHTML = $picturesHTML;
-    document.getElementById("form").innerHTML = $picturesFormHTML;
+    document.getElementById("result").innerHTML = $picturesFormHTML;
 });
 
 $("#searchPics").click(function() {
     document.getElementById("toFill").innerHTML = $searchPicsHTML;
-    document.getElementById("form").innerHTML = $searchPicsFormHTML;
+    document.getElementById("result").innerHTML = $searchPicsFormHTML;
 });
 
-$("#friendsPics").click(function() {
-    document.getElementById("toFill").innerHTML = $friendsPicsHTML;
-    document.getElementById("form").innerHTML = $friendsPicsFormHTML;
-    document.getElementById("form1").innerHTML = $friendsPicsFormNameHTML;
-});
 
 $("#favorites").click(function() {
     document.getElementById("toFill").innerHTML = $favoritesHTML;
-    document.getElementById("form").innerHTML = $favoritesPicsFormHTML;
+    document.getElementById("result").innerHTML = $favoritesPicsFormHTML;
+});
+
+$("#home").click(function(){
+	 document.getElementById("toFill").innerHTML = $home;
 });
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
-    $('form').hide();
-    $('form').show();
 });
-
 // end append to HTML
 ////////////////////
 ///////////////////
+
+
+
+
+
+
