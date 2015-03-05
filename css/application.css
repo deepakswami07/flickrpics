@@ -17,7 +17,7 @@ form, #note {
 /*footer {
 	text-align: center;
 }*/
-.signupMessage {
+.signupMessage, .emailMessage {
   border-radius: 5px;
   display: inline-block;
   font-size: 1em;
@@ -31,7 +31,7 @@ form, #note {
   color: #fff;
 }
 
-.signupMessage:after {
+.signupMessage:after, .emailMessage:after {
   right: 100%;
   top: 50%;
   border: solid transparent;
