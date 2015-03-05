@@ -42,6 +42,7 @@ $(document).ready(function() {
 //begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
 var $signupConfirmPassword = $("#signupConfirmPassword")
+var $signupEmail = $("#signupEmail");
 
 function isSignupPasswordValid(){
     return $signupPassword.val().length > 4;
@@ -51,8 +52,13 @@ function areSignupPasswordConfirmMatching(){
     return $signupPassword.val() === $signupConfirmPassword.val();
 }
 
-$("#signupForm p").hide();
+function isEmailValid(){
+    var emailPattern = new RegExp(/(.+)@(.+){2,}\.(.+){2,}/);
+    var email = $signupEmail.val();
+    return emailPattern.test(email);
+}
 
+$("#signupForm p").hide();
 
 function checkSignupPassword(){
     if( isSignupPasswordValid() ){
@@ -70,14 +76,6 @@ function checkSignupConfirmPassword(){
     }
 }
 
-var $signupEmail = $('#signupEmail');
-
-
-function isEmailValid(){
-    return $signupEmail.val() === /(.+)@(.+){2,}\.(.+){2,}/;
-}
-
-
 function checkEmail(){
     if( isEmailValid() ){
         $signupEmail.next().hide();
@@ -86,18 +84,20 @@ function checkEmail(){
     }
 }
 
-$signupEmail.focus(checkEmail).keyup(checkEmail);
 $signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(checkSignupConfirmPassword);
 $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfirmPassword);
+$signupEmail.focus(checkEmail).keyup(checkEmail);
+
+//begin email validation for register
+
+
+
+
+
 //end signup passowrd/confirm password validation form
 /////////////////////////////
 ////////////////////////////
 
-//begin email validation for register
-/*
-checks that email isn't blank, @ symbol with at least 1 character before it and least 2 letters after it,
-ends with a fullstop with at least 2 letters after it
-*/
 
 
 
