@@ -39,7 +39,7 @@ $(document).ready(function() {
 });
 
 
-//begin signup form
+//begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
 var $signupConfirmPassword = $("#signupConfirmPassword")
 
@@ -53,7 +53,6 @@ function areSignupPasswordConfirmMatching(){
 
 $("#signupForm p").hide();
 
-//end signup form
 
 function checkSignupPassword(){
     if( isSignupPasswordValid() ){
@@ -71,8 +70,50 @@ function checkSignupConfirmPassword(){
     }
 }
 
+var $signupEmail = $('#signupEmail');
+
+
+function isEmailValid(){
+    return $signupEmail.val() === /(.+)@(.+){2,}\.(.+){2,}/;
+}
+
+
+function checkEmail(){
+    if( isEmailValid() ){
+        $signupEmail.next().hide();
+    } else {
+        $signupEmail.next().show();
+    }
+}
+
+$signupEmail.focus(checkEmail).keyup(checkEmail);
 $signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(checkSignupConfirmPassword);
 $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfirmPassword);
+//end signup passowrd/confirm password validation form
+/////////////////////////////
+////////////////////////////
+
+//begin email validation for register
+/*
+checks that email isn't blank, @ symbol with at least 1 character before it and least 2 letters after it,
+ends with a fullstop with at least 2 letters after it
+*/
+
+
+
+// var booking_email = $('input[name=email]').val();
+
+ // if( booking_email == '' || booking_email.indexOf('@') == -1 || booking_email.indexOf('.') == -1 ) {
+
+ //   // perform my alert
+
+ // }
+
+ // indexOf("welcome")
+//end email validation for register
+//////////////////////////////////
+/////////////////////////////////
+
 // $("#submit").click(function(event){
 // 		event.preventDefault()
 // 		var searchVal = $("#search").val();
