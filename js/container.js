@@ -51,45 +51,53 @@ $searchPicsFormHTML += '</form>';
 //////////////////////////
 
 
-// begin ajax for friends pics
-var $friendsPicsHTML = " ";
-$friendsPicsHTML += '<section>';
-$friendsPicsHTML += '<h1>friends pics</h1>';
-$friendsPicsHTML += '<article>';
-$friendsPicsHTML += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
-$friendsPicsHTML += '</article>';
-$friendsPicsHTML += '</section>';
+// begin ajax for userid pics
+var $useridHTML = " ";
+$userid += '<section>';
+$userid += '<h1>friends pics</h1>';
+$userid += '<article>';
+$userid += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
+$userid += '</article>';
+$userid += '</section>';
 
-    //begin ajax for friends pics by ID    
-    var $friendsPicsFormHTML = " ";
-    $friendsPicsFormHTML += '<form style="display: inline" class="navbar-form navbar-center form-inline" role="searchFriends">';
-    $friendsPicsFormHTML += '<div class="form-group">';
-    $friendsPicsFormHTML += '<label for="searchFriends"></label>';
-    $friendsPicsFormHTML += '<div class="form-group">';
-    $friendsPicsFormHTML += '<input type="text" class="form-control" id="searchFriends" name="searchFriends" placeholder="xxxxxxxx@xxx">';
-    $friendsPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-    $friendsPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search using id</span>';
-    $friendsPicsFormHTML += '</button>';
-    $friendsPicsFormHTML += '</div>';
-    $friendsPicsFormHTML += '</div>';
-    $friendsPicsFormHTML += '</form>';
-    //end ajax for friends pics by ID
+var $useridFormHTML = " ";
+$useridFormHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriends">';
+$useridFormHTML += '<div class="form-group">';
+$useridFormHTML += '<label for="searchFriends"></label>';
+$useridFormHTML += '<div class="form-group">';
+$useridFormHTML += '<input type="text" class="form-control" id="searchFriends" name="searchFriends" placeholder="xxxxxxxx@xxx">';
+$useridFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$useridFormHTML += '<span class="glyphicon glyphicon-search"> Search using id</span>';
+$useridFormHTML += '</button>';
+$useridFormHTML += '</div>';
+$useridFormHTML += '</div>';
+$useridFormHTML += '</form>';
+//end ajax for userid pics
+///////////////////////////
+//////////////////////////
 
-    //begin ajax for friends pics by username
-    var $friendsPicsFormNameHTML = " ";
-    $friendsPicsFormNameHTML += '<form style="display: inline" class="navbar-form navbar-center form-inline" role="searchFriendsName">';
-    $friendsPicsFormNameHTML += '<div class="form-group">';
-    $friendsPicsFormNameHTML += '<label for="searchFriendsName"></label>';
-    $friendsPicsFormNameHTML += '<div class="form-group">';
-    $friendsPicsFormNameHTML += '<input type="text" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="mypics">';
-    $friendsPicsFormNameHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
-    $friendsPicsFormNameHTML += '<span class="glyphicon glyphicon-search"> Search name</span>';
-    $friendsPicsFormNameHTML += '</button>';
-    $friendsPicsFormNameHTML += '</div>';
-    $friendsPicsFormNameHTML += '</div>';
-    $friendsPicsFormNameHTML += '</form>';
-    //begin ajax for friends pics by username
-// end ajax for friends pics
+//begin ajax for for username
+var $useridHTML = " ";
+$userid += '<section>';
+$userid += '<h1>friends pics</h1>';
+$userid += '<article>';
+$userid += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
+$userid += '</article>';
+$userid += '</section>';
+
+var $friendsPicsFormNameHTML = " ";
+$friendsPicsFormNameHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriendsName">';
+$friendsPicsFormNameHTML += '<div class="form-group">';
+$friendsPicsFormNameHTML += '<label for="searchFriendsName"></label>';
+$friendsPicsFormNameHTML += '<div class="form-group">';
+$friendsPicsFormNameHTML += '<input type="text" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="mypics">';
+$friendsPicsFormNameHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
+$friendsPicsFormNameHTML += '<span class="glyphicon glyphicon-search"> Search name</span>';
+$friendsPicsFormNameHTML += '</button>';
+$friendsPicsFormNameHTML += '</div>';
+$friendsPicsFormNameHTML += '</div>';
+$friendsPicsFormNameHTML += '</form>';
+//end ajax for friends pics by username
 ////////////////////////////
 ///////////////////////////
 
@@ -154,6 +162,12 @@ $("#friendsPics").click(function() {
     document.getElementById("result").innerHTML = $friendsPicsFormHTML;
     // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
 });
+
+// $("#friendsPics").click(function() {
+//     document.getElementById("toFill").innerHTML = $friendsPicsHTML;
+//     document.getElementById("result").innerHTML = $friendsPicsFormHTML;
+//     // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
+// });
 
 $("#pictures").click(function() {
     document.getElementById("toFill").innerHTML = $picturesHTML;
