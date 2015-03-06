@@ -5,7 +5,6 @@ var pictures = function() {
     $('form').submit(function(event) {
 
         event.preventDefault();
-        console.log("hello");
         var flickrOptions = {
             format: "json"
         };
@@ -49,7 +48,6 @@ var searchPictures = function() {
 
         event.preventDefault();
         var animal = $searchField.val();
-        console.log("hello");
         var flickrOptions = {
             tags: animal,
             format: "json"
@@ -95,7 +93,7 @@ var useridPictures = function() {
 
         event.preventDefault();
         var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
-        var $searchField = $("#searchFriends");
+        var $searchField = $("#searchFriendsID");
         var userId = $searchField.val();
            
         var flickrOptions = {
@@ -105,7 +103,7 @@ var useridPictures = function() {
             per_page: 20,
             format: "json"
         }
-
+       
         function flickrImages(data) {
             var friendsHTML = "";
             if (data.photos.photo.length > 0){
