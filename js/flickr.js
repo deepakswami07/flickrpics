@@ -103,7 +103,7 @@ var useridPictures = function() {
             per_page: 20,
             format: "json"
         }
-       
+        
         function flickrImages(data) {
             var friendsHTML = "";
             if (data.photos.photo.length > 0){
@@ -156,8 +156,7 @@ var usernamePictures = function() {
             per_page: 20,
             format: "json"
         }
-        console.log(flickrOptions);
-
+       
         function flickrImages(data) {
             var friendsHTML = "";
             if (data.photos.photo.length > 0){
