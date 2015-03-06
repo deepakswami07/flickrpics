@@ -1,44 +1,3 @@
-// $(document).ready(function() {
-//     $("#pictures").click(function() {
-//         document.getElementById("photos").innerHTML = "";
-//         $("#getPictures").text() === "Generate pics";
-//         return pictures();
-//     });
-// });
-
-// $(document).ready(function() {
-//     $("#searchPics").click(function() {
-//         document.getElementById("photos").innerHTML = "";
-//         $("#search").text() === "Search";
-//         return searchPictures();
-//     });
-// });
-
-
-// $(document).ready(function() {
-//     $("#userID").click(function() {
-//         document.getElementById("photos").innerHTML = "";
-//         $("#searchFriendsID").text() === "Search using id";
-//         return useridPictures();
-//     });
-// });
-
-
-// $(document).ready(function() {
-//     $("#username").click(function() {
-//          document.getElementById("photos").innerHTML = "";
-//         $("#searchFriendsName").text() === "Username";
-//         return usernamePictures();
-//     });
-// });
-
-// $(document).ready(function() {
-//     $("#favorites").click(function() {
-//         document.getElementById("photos").innerHTML = "";
-//         $("#searchFriendsFav").text() === "Favorites";
-//         return favoritePictures();
-//     });
-// });
 $(document).ready(function() {
 
     $("#pictures").click(function() {
@@ -78,9 +37,7 @@ $(document).ready(function() {
     $("#about").click(function() {
         document.getElementById("photos").innerHTML = "";
     });
-    
 });
-
 
 //begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
@@ -141,23 +98,10 @@ $signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(chec
 $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfirmPassword);
 $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
-
-
 //end signup/login passowrd/confirm password validation form
 /////////////////////////////
 ////////////////////////////
 
-
-// $("#submit").click(function(event){
-// 		event.preventDefault()
-// 		var searchVal = $("#search").val();
-// 		console.log(searchVal);
-// 		if (searchVal.length > 0) {
-// 			console.log("enter search term");
-// 		} else {
-// 			console.log("hello");
-// 		}
-// 	});
 
 
 
