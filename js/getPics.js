@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("#pictures").click(function() {
+        document.getElementById("photos").innerHTML = " ";
         $("#getPictures").text() === "Generate pics";
         return pictures();
     });
@@ -7,6 +8,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#searchPics").click(function() {
+        document.getElementById("photos").innerHTML = " ";
         $("#search").text() === "Search";
         return searchPictures();
     });
@@ -15,6 +17,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#userID").click(function() {
+        document.getElementById("photos").innerHTML = " ";
         $("#searchFriendsID").text() === "Search using id";
         return useridPictures();
     });
@@ -23,6 +26,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#username").click(function() {
+        document.getElementById("photos").innerHTML = " ";
         $("#searchFriendsName").text() === "Username";
         return usernamePictures();
     });
@@ -30,6 +34,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#favorites").click(function() {
+        document.getElementById("photos").innerHTML = " ";
         $("#searchFriendsFav").text() === "Favorites";
         return favoritePictures();
     });
