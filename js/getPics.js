@@ -1,13 +1,13 @@
 $(document).ready(function() {
     $("#pictures").click(function() {
-        $(this).text() === "Generate pics";
+        $("#getPictures").text() === "Generate pics";
         return pictures();
     });
 });
 
 $(document).ready(function() {
     $("#searchPics").click(function() {
-        $(this).text() === "Search";
+        $("#search").text() === "Search";
         return searchPictures();
     });
 });
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#userID").click(function() {
-        $(this).text() === "UserID";
+        $("#searchFriendsID").text() === "Search using id";
         return useridPictures();
     });
 });
@@ -23,14 +23,14 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#username").click(function() {
-        $(this).text() === "Username";
+        $("#searchFriendsName").text() === "Username";
         return usernamePictures();
     });
 });
 
 $(document).ready(function() {
     $("#favorites").click(function() {
-        $(this).text() === "Favorites";
+        $("#searchFriendsFav").text() === "Favorites";
         return favoritePictures();
     });
 });
