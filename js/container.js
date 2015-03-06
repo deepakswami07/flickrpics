@@ -10,10 +10,10 @@ $picturesHTML += '</section>';
 var $picturesFormHTML = " ";
 $picturesFormHTML += '<form class="navbar-form navbar-center" role="picutres">';
 $picturesFormHTML += '<div class="form-group">';
-$picturesFormHTML += '<label for="picutres"></label>';
+$picturesFormHTML += '<label for="getPictures"></label>';
 $picturesFormHTML += '<div class="form-group">';
-$picturesFormHTML += ' <button id="submit" type="submit" value="picutres" class="btn btn-default navbar-btn">';
-$picturesFormHTML += '<span class="glyphicon glyphicon-picutres"> Generate pics</span>';
+$picturesFormHTML += ' <button id="getPictures" type="submit" value="pictures" class="btn btn-default navbar-btn">';
+$picturesFormHTML += '<span class="glyphicon glyphicon-search"> Generate pics</span>';
 $picturesFormHTML += '</button>';
 $picturesFormHTML += '</div>';
 $picturesFormHTML += '</div>';
@@ -63,9 +63,9 @@ $useridHTML += '</section>';
 var $useridPicsFormHTML = " ";
 $useridPicsFormHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriends">';
 $useridPicsFormHTML += '<div class="form-group">';
-$useridPicsFormHTML += '<label for="searchFriends"></label>';
+$useridPicsFormHTML += '<label for="searchFriendsID"></label>';
 $useridPicsFormHTML += '<div class="form-group">';
-$useridPicsFormHTML += '<input type="text" class="form-control" id="searchFriends" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
+$useridPicsFormHTML += '<input type="text" class="form-control" id="searchFriendsID" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
 $useridPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
 $useridPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search using id</span>';
 $useridPicsFormHTML += '</button>';
@@ -159,7 +159,15 @@ var $homePicsFormHTML = " ";
 
 
 /// begin append to HTML
+$("#pictures").click(function() {
+    document.getElementById("toFill").innerHTML = $picturesHTML;
+    document.getElementById("result").innerHTML = $picturesFormHTML;
+});
 
+$("#searchPics").click(function() {
+    document.getElementById("toFill").innerHTML = $searchPicsHTML;
+    document.getElementById("result").innerHTML = $searchPicsFormHTML;
+});
 
 $("#userID").click(function() {
     document.getElementById("toFill").innerHTML = $useridHTML;
@@ -171,17 +179,6 @@ $("#username").click(function() {
     document.getElementById("result").innerHTML = $usernamePicsFormHTML;
     // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
 });
-
-$("#pictures").click(function() {
-    document.getElementById("toFill").innerHTML = $picturesHTML;
-    document.getElementById("result").innerHTML = $picturesFormHTML;
-});
-
-$("#searchPics").click(function() {
-    document.getElementById("toFill").innerHTML = $searchPicsHTML;
-    document.getElementById("result").innerHTML = $searchPicsFormHTML;
-});
-
 
 $("#favorites").click(function() {
     document.getElementById("toFill").innerHTML = $favoritesHTML;
