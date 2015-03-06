@@ -65,7 +65,7 @@ $useridPicsFormHTML += '<form class="navbar-form navbar-center form-inline" role
 $useridPicsFormHTML += '<div class="form-group">';
 $useridPicsFormHTML += '<label for="searchFriends"></label>';
 $useridPicsFormHTML += '<div class="form-group">';
-$useridPicsFormHTML += '<input type="text" class="form-control" id="searchFriends" name="searchFriends" placeholder="xxxxxxxx@xxx">';
+$useridPicsFormHTML += '<input type="text" class="form-control" id="searchFriends" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
 $useridPicsFormHTML += ' <button id="submit" type="submit" value="search" class="btn btn-default navbar-btn">';
 $useridPicsFormHTML += '<span class="glyphicon glyphicon-search"> Search using id</span>';
 $useridPicsFormHTML += '</button>';
