@@ -18,7 +18,6 @@ $picturesFormHTML += '</button>';
 $picturesFormHTML += '</div>';
 $picturesFormHTML += '</div>';
 $picturesFormHTML += '</form>';
-
 // end ajax for random pics
 ///////////////////////////
 //////////////////////////
@@ -46,7 +45,6 @@ $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</form>';
 // end ajax for search pics
-
 ///////////////////////////
 //////////////////////////
 
@@ -177,7 +175,6 @@ $("#userID").click(function() {
 $("#username").click(function() {
     document.getElementById("toFill").innerHTML = $usernameHTML;
     document.getElementById("result").innerHTML = $usernamePicsFormHTML;
-    // document.getElementById("result1").innerHTML = $friendsPicsFormNameHTML;
 });
 
 $("#favorites").click(function() {
