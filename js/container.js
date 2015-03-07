@@ -144,7 +144,7 @@ var $aboutPicsFormHTML = " ";
 //begin ajax for home
 var $home = " ";
 $home += '<section id="toFill">';
-$home += '<h1>search away....</h1>';
+$home += '<h1 style="text-align:center">WELCOME TO FLICKRPICS</h1>';
 $home += '<article>';
 $home += '<p class="lead">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....</p>';
 $home += '</article>';
