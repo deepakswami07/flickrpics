@@ -39,8 +39,12 @@ ul li {
     margin-right: auto;
 }
 
-  #photos .image {
+#photos .image {
   display: inline-flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
   min-height: 240px;
   background: #edeff0;
   text-align: center;
