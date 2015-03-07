@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    
     $("#pictures").click(function() {
         document.getElementById("photos").innerHTML = "";
         $("#getPictures").text() === "Generate pics";
