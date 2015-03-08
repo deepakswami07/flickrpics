@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/application.css">
     <!-- [if lt IE 9]
@@ -19,8 +20,8 @@
 
 <body>
 
-    <div class="container">
-        <div class="masthead">
+    <div class="container-fluid">
+        <div class="full masthead">
             <header "page-header">
                 <ul class="nav nav-pills pull-right">
                     <li><a  data-toggle="modal" class="btn btn-default btn-sm" href="#signup">Sign up</a>
@@ -29,9 +30,8 @@
                     </li>
                 </ul>
                 <h1 class="text-muted">Flickrpics</h1>
-            </header>
-            <hr/>
-
+            </header><br/>
+          
             <nav class="navbar-fixed">
                 <ul class="nav nav-tabs nav-justified">
 
@@ -209,7 +209,7 @@
         </div>
         <!--  end login modal  -->
 
-        <section id="toFill" class="jumbotron">
+        <section id="toFill" class="jumbotron panel love full">
             <h1 style="text-align:center">WELCOME TO FLICKRPICS</h1>
             <article>
                 <p class="lead">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....
@@ -221,7 +221,7 @@
         </div>
     
         <!--  container begin -->
-        <div id="photoholder" class="container">
+        <div id="photoholder" class="container full masthead">
             <div id="photos"></div>
         </div>
         <!--  container end  -->
