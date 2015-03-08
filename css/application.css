@@ -1,5 +1,20 @@
 body {
-  padding: 40px;
+  width: 100%;
+  /*padding: 40px;*/
+  /*background: #D6231E;*/
+  background: #252525;
+}
+
+body h1 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  line-height: .65;
+}
+
+body p {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  line-height: .85;
 }
 
 form, #note {
@@ -8,6 +23,7 @@ form, #note {
 
 #footer {
   text-align: center;
+  color: #fff;
 }
 
 ul li {
@@ -35,8 +51,8 @@ ul li {
 /* begin photo/image rules */
 #photoholder{
     display: block;
-    margin-left: -35px;
-    margin-right: auto;
+    margin : auto auto;
+  
 }
 
 #photos .image {
@@ -130,7 +146,7 @@ input:focus:-ms-input-placeholder { color:transparent; }
 
 
 
-/* extra rules 
+ extra rules 
 #toFill {
   text-align: left;
 }
@@ -139,9 +155,8 @@ input:focus:-ms-input-placeholder { color:transparent; }
   text-align: center;
 }
 
- {
+/* {
   color: #3f8abf;
   line-height: 1.4;
   text-decoration: none;
-}
-*/
+}*/
