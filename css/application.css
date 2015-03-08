@@ -5,6 +5,11 @@ body {
   background: #252525;
 }
 
+form, #note {
+  text-align: center;
+}
+
+/* begin navbar rules */
 .main-header {
   font-family: 'Montserrat', sans-serif;
   line-height: .1;
@@ -36,44 +41,46 @@ body {
   font-weight: 100;
   margin: 40px auto;
   padding: 40px 0px 6px 0px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-transform: lowercase;
   font-variant: small-caps;
 }
 
-form, #note {
-  text-align: center;
-}
-
-#footer {
-  text-align: center;
-  color: #fff;
-}
-
-ul li {
-  list-style-type: none;
-/*  text-align: left;*/
-}
 li>a {
   position: relative;
   color: #9d9d9d;
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   display: inline;
-  text-decoration: none;;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  line-height: 145%;
 }
 
-ul>li>a {
-  position: relative;
- /* color: #9d9d9d;*/
- /* text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
-  display: block;
-  text-decoration: none;;
+ul li {
+  list-style-type: none;
+  text-align: left;
 }
+
+/* end footer rules */
+/* //////////////////////// */
+/* //////////////////////// */
+
+
+/* end footer rules */
+#footer {
+  text-align: center;
+  color: #fff;
+}
+/* end navbar rules */
+/* //////////////////////// */
+/* //////////////////////// */
 
 #noMatch {
   text-align: center;
   }
-
 
 #overlay {
   background:rgba(0,0,0,0.7);
