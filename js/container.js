@@ -1,9 +1,10 @@
 // begin ajax for random pics
 var $picturesHTML = " ";
 $picturesHTML += '<section>';
-$picturesHTML += '<h1>generate random pictures</h1>';
+$picturesHTML += '<h1 class="main-header">GENERATE</h1>';
+$picturesHTML += '<h1 class="second-header">random pictures</h1>';
 $picturesHTML += '<article>';
-$picturesHTML += '<p class="lead">Click on the generate pics button to see recent photos that have been posted on Flickr.</p>';
+$picturesHTML += '<p class="description">Click on the generate pics button to see recent photos that have been posted on Flickr.</p>';
 $picturesHTML += '</article>';
 $picturesHTML += '</section>';
 
@@ -26,9 +27,10 @@ $picturesFormHTML += '</form>';
 // begin ajax for search pics
 var $searchPicsHTML = " ";
 $searchPicsHTML += '<section>';
-$searchPicsHTML += '<h1>search pics by topic</h1>';
+$searchPicsHTML += '<h1 class="main-header">SEARCH</h1>';
+$searchPicsHTML += '<h1 class="second-header">pics by topic</h1>';
 $searchPicsHTML += '<article>';
-$searchPicsHTML += '<p class="lead">Type in a search term to find the most recent photos that have been posted on Flickr.</p>';
+$searchPicsHTML += '<p class="description">Type in a search term to find the most recent photos that have been posted on Flickr.</p>';
 $searchPicsHTML += '</article>';
 $searchPicsHTML += '</section>';
 
@@ -52,9 +54,10 @@ $searchPicsFormHTML += '</form>';
 // begin ajax for userid pics
 var $useridHTML = " ";
 $useridHTML += '<section>';
-$useridHTML += '<h1>friends pics by userid</h1>';
+$useridHTML += '<h1 class="main-header">FRIENDS</h1>';
+$useridHTML += '<h1 class="second-header">pics by userid</h1>';
 $useridHTML += '<article>';
-$useridHTML += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
+$useridHTML += '<p class="description">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
 $useridHTML += '</article>';
 $useridHTML += '</section>';
 
@@ -77,9 +80,10 @@ $useridPicsFormHTML += '</form>';
 //begin ajax for for username
 var $usernameHTML = " ";
 $usernameHTML += '<section>';
-$usernameHTML += '<h1>friends pics by username</h1>';
+$usernameHTML += '<h1 class="main-header">FRIENDS</h1>';
+$usernameHTML += '<h1 class="second-header">by username</h1>';
 $usernameHTML += '<article>';
-$usernameHTML += '<p class="lead">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
+$usernameHTML += '<p class="description">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
 $usernameHTML += '</article>';
 $usernameHTML += '</section>';
 
@@ -103,9 +107,10 @@ $usernamePicsFormHTML += '</form>';
 // begin ajax for friends favorite pics
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
-$favoritesHTML += '<h1>friends fav pics of user</h1>';
+$favoritesHTML += '<h1 class="main-header">FRIENDS</h1>';
+$favoritesHTML += '<h1 class="second-header">favorite pics</h1>';
 $favoritesHTML += '<article>';
-$favoritesHTML += '<p class="lead">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s userid and find their favorite photos.</p>';
+$favoritesHTML += '<p class="description">Keep up-to-date on your friends’ favorite pictures. Type in your friend’s userid and find their favorite photos.</p>';
 $favoritesHTML += '</article>';
 $favoritesHTML += '</section>';
 
@@ -129,9 +134,10 @@ $favoritesPicsFormHTML += '</form>';
 // begin ajax for about HTML
 var $aboutHTML = " ";
 $aboutHTML += '<section>';
-$aboutHTML += '<h1>about flickrpics</h1>';
+$aboutHTML += '<h1 class="main-header">ABOUT</h1>';
+$aboutHTML += '<h1 class="second-header">flickrpics</h1>';
 $aboutHTML += '<article>';
-$aboutHTML += '<p class="lead">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most recent posts on flickr by category, friends or your friend’s favorites.</p>';
+$aboutHTML += '<p class="description">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most recent posts on flickr by category, friends or your friend’s favorites.</p>';
 $aboutHTML += '</article>';
 $aboutHTML += '</section>';
 
@@ -144,9 +150,9 @@ var $aboutPicsFormHTML = " ";
 //begin ajax for home
 var $home = " ";
 $home += '<section id="toFill">';
-$home += '<h1 style="text-align:center">WELCOME TO FLICKRPICS</h1>';
+$home += '<h1 class="main-header">FLICKRPICS</h1>';
 $home += '<article>';
-$home += '<p class="lead">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....</p>';
+$home += '<p class="description">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....</p>';
 $home += '</article>';
 $home += '</section>';
 
