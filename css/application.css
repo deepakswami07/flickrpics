@@ -12,13 +12,14 @@ body {
   text-align: center;
   color: #D6231E;
   font-weight: 700;
+  padding-top: 10%;
 }
 
 .second-header {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.34375em;
   letter-spacing: 3.8px;
-  line-height: 2.34375em;
+  line-height: 0.64375em;
   text-align: center;
   color: #fff;
   font-weight: 300;
@@ -26,11 +27,18 @@ body {
 
 .description {
   font-family: 'Lato', sans-serif;
-  line-height: 4;
+  line-height: 145%;
   text-align: center;
-  color: #fff;
-  font-size: 1.35em;
+  color: #B0B0B5;
+  /*color: #424249;*/
+  width: 600px;
+  font-size: 1.5em;
   font-weight: 100;
+  margin: 40px auto;
+  padding: 40px 0px 6px 0px;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 
 form, #note {
