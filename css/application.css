@@ -52,7 +52,7 @@ form, #note {
   text-align: center;
   color: #B0B0B5;
   /*color: #424249;*/
-  width: 600px;
+  width: 375px;
   font-size: 1.5em;
   font-weight: 100;
   margin: 20px auto;
@@ -97,6 +97,15 @@ form {
   background: #252525;
 }
 
+.button-style {
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  color: #fff;
+  font-size: 18px;
+        }
+
 /* begin footer rules */
 #footer {
   text-align: center;
@@ -105,6 +114,7 @@ form {
   letter-spacing: 0.1em;
   font-weight: 400;
   line-height: 145%;
+  margin-top: 2%;
 }
 /* end footer rules */
 /* //////////////////////// */
