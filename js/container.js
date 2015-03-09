@@ -1,3 +1,4 @@
+//////////////////////////
 // begin ajax for random pics
 var $picturesHTML = " ";
 $picturesHTML += '<section>';
@@ -22,9 +23,10 @@ $picturesFormHTML += '</div>';
 $picturesFormHTML += '</form>';
 // end ajax for random pics
 ///////////////////////////
+
+
+
 //////////////////////////
-
-
 // begin ajax for search pics
 var $searchPicsHTML = " ";
 $searchPicsHTML += '<section>';
@@ -49,9 +51,9 @@ $searchPicsFormHTML += '</div>';
 $searchPicsFormHTML += '</form>';
 // end ajax for search pics
 ///////////////////////////
-//////////////////////////
 
 
+///////////////////////////
 // begin ajax for userid pics
 var $useridHTML = " ";
 $useridHTML += '<section>';
@@ -76,8 +78,9 @@ $useridPicsFormHTML += '</div>';
 $useridPicsFormHTML += '</form>';
 //end ajax for userid pics
 ///////////////////////////
-//////////////////////////
 
+
+//////////////////////////
 //begin ajax for for username
 var $usernameHTML = " ";
 $usernameHTML += '<section>';
@@ -102,9 +105,9 @@ $usernamePicsFormHTML += '</div>';
 $usernamePicsFormHTML += '</form>';
 //end ajax for friends pics by username
 ////////////////////////////
+
+
 ///////////////////////////
-
-
 // begin ajax for friends favorite pics
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
@@ -129,9 +132,9 @@ $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</form>';
 // end ajax for favorite pics
 ///////////////////////////
+
+
 //////////////////////////
-
-
 // begin ajax for about HTML
 var $aboutHTML = " ";
 $aboutHTML += '<section>';
@@ -145,9 +148,9 @@ $aboutHTML += '</section>';
 var $aboutPicsFormHTML = " ";
 // end ajax for about HTML
 ///////////////////////////
+
+
 //////////////////////////
-
-
 //begin ajax for home
 var $home = " ";
 $home += '<section id="toFill">';
@@ -160,14 +163,14 @@ $home += '</section>';
 var $homePicsFormHTML = " ";
 // end ajax for about home
 ///////////////////////////
+
+
 //////////////////////////
-
-
-/// begin append to HTML
+// begin append to HTML //
 $("#pictures").click(function() {
     document.getElementById("toFill").innerHTML = $picturesHTML;
     document.getElementById("result").innerHTML = $picturesFormHTML;
-});
+}); 
 
 $("#searchPics").click(function() {
     document.getElementById("toFill").innerHTML = $searchPicsHTML;
@@ -199,9 +202,8 @@ $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
     document.getElementById("result").innerHTML = $aboutPicsFormHTML;
 });
-// end append to HTML
-////////////////////
-///////////////////
+/// end append to HTML ///
+//////////////////////////
 
 
 
