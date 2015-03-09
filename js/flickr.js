@@ -9,7 +9,7 @@ var pictures = function() {
         function flickrImages(data) {
             var photoHTML = "";
             if (data.items.length > 0) {
-                photoHTML = '<ul>';
+                photoHTML = '<ul id="imageGallery">';
                 $.each(data.items, function(i, photos) {
                     photoHTML += '<li class="col-sm-3 col-sm-3">';
                     photoHTML += '<a href="' + photos.link + '" class="image">';
@@ -46,7 +46,7 @@ var searchPictures = function() {
         function flickrImages(data) {
             var photoHTML = "";
             if (data.items.length > 0) {
-                photoHTML = '<ul>';
+                photoHTML = '<ul id="imageGallery">';
                 $.each(data.items, function(i, photos) {
                     photoHTML += '<li class="col-sm-3 col-sm-3">';
                     photoHTML += '<a href="' + photos.link + '" class="image">';
@@ -88,7 +88,7 @@ var useridPictures = function() {
         function flickrImages(data) {
             var friendsHTML = "";
             if (data.photos.photo.length > 0){
-                friendsHTML += '<ul>';
+                friendsHTML += '<ul id="imageGallery">';
                 $.each(data.photos.photo, function(i,item) {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                     friendsHTML += '<li class="col-sm-3 col-sm-3">';
@@ -131,7 +131,7 @@ var usernamePictures = function() {
         function flickrImages(data) {
             var friendsHTML = "";
             if (data.photos.photo.length > 0){
-                friendsHTML += '<ul>';
+                friendsHTML += '<ul id="imageGallery">';
                 $.each(data.photos.photo, function(i,item) {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                     friendsHTML += '<li class="col-sm-3 col-sm-3">';
@@ -171,7 +171,7 @@ var favoritePictures = function() {
         function flickrImages(data) {
             var friendsFavHTML = "";
             if (data.photos.photo.length > 0){
-                friendsFavHTML += '<ul>';
+                friendsFavHTML += '<ul id="imageGallery">';
                 $.each(data.photos.photo, function(i,item) {
                  var friendsFavURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                 friendsFavHTML += '<li class="col-sm-3 col-sm-3">';
