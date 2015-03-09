@@ -192,6 +192,7 @@ $("#favorites").click(function() {
 $("#home").click(function(){
 	 document.getElementById("toFill").innerHTML = $home;
      document.getElementById("result").innerHTML = $homePicsFormHTML;
+     document.body.style.background = "url('images/image07.png')no-repeat, cover center, center";
 });
 
 $("#about").click(function() {

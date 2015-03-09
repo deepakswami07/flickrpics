@@ -1,13 +1,18 @@
 body {
   width: 100%;
-  /*padding: 40px;*/
   /*background: #D6231E;*/
   background: #252525;
+  
 }
 
-form, #note {
+form {
   text-align: center;
 }
+
+button.close {
+  color: #fff;
+}
+
 #noMatch {
   text-align: center;
   }
@@ -95,6 +100,13 @@ ul li {
 
 form {
   background: #252525;
+}
+
+.image01 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .button-style {
