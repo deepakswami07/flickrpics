@@ -15,7 +15,7 @@ var pictures = function() {
                 $.each(data.items, function(i, photos) {
                     photoHTML += '<li class="col-sm-3 col-sm-3">';
                     photoHTML += '<a href="' + photos.link + '" class="image">';
-                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '<img class="imageOverlay" src=" ' + photos.media.m + ' ">';
                     photoHTML += '</a>';
                     photoHTML += '</li>';
                 });
@@ -53,7 +53,7 @@ var searchPictures = function() {
                 $.each(data.items, function(i, photos) {
                     photoHTML += '<li class="col-sm-3 col-sm-3">';
                     photoHTML += '<a href="' + photos.link + '" class="image">';
-                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '<img class="imageOverlay" src=" ' + photos.media.m + ' ">';
                     photoHTML += '</a>';
                     photoHTML += '</li>';
                 });
@@ -96,7 +96,7 @@ var useridPictures = function() {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                     friendsHTML += '<li class="col-sm-3 col-sm-3">';
                     friendsHTML += '<a href="https://www.flickr.com/photos/' + userId + '/' + item.id + ' " class="image">';
-                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
+                    friendsHTML += '<img class="imageOverlay" src=" ' + friendsPicsURL + ' " class="images">';
                     friendsHTML += '</li>';
                 });
             } else {
@@ -139,7 +139,7 @@ var usernamePictures = function() {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                     friendsHTML += '<li class="col-sm-3 col-sm-3">';
                     friendsHTML += '<a href="https://www.flickr.com/photos/' + username + '/' + item.id + ' " class="image">';
-                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
+                    friendsHTML += '<img class="imageOverlay" src=" ' + friendsPicsURL + ' " class="images">';
                     friendsHTML += '</li>';
                 });
             } else {
@@ -179,7 +179,7 @@ var favoritePictures = function() {
                  var friendsFavURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
                 friendsFavHTML += '<li class="col-sm-3 col-sm-3">';
                 friendsFavHTML += '<a href="https://www.flickr.com/photos/' + item.owner + '/' + item.id + ' " class="image">';
-                friendsFavHTML += '<img src=" ' + friendsFavURL + ' " class="images">';
+                friendsFavHTML += '<img class="imageOverlay" src=" ' + friendsFavURL + ' " class="images">';
                 friendsFavHTML += '</li>';
                 });
             } else {
