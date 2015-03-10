@@ -1,43 +1,49 @@
-$(document).ready(function() {
-    
-    $("#pictures").click(function() {
-        document.getElementById("photos").innerHTML = "";
-        $("#getPictures").text() === "Generate pics";
-        return pictures();
-    });
+function loadAll(){
+    $(document).ready(function() {
+        
+        $("#pictures").click(function() {
+            document.getElementById("photos").innerHTML = "";
+            $("#getPictures").text() === "Generate pics";
+            window.onload = pictures();
+            // return pictures();
+         });
 
-    $("#searchPics").click(function() {
-        document.getElementById("photos").innerHTML = "";
-        $("#search").text() === "Search";
-        return searchPictures();
-    });
+        $("#searchPics").click(function() {
+            document.getElementById("photos").innerHTML = "";
+            $("#search").text() === "Search";
+            return searchPictures();
+        });
 
-    $("#userID").click(function() {
-        document.getElementById("photos").innerHTML = "";
-        $("#searchFriendsID").text() === "Search using id";
-        return useridPictures();
-    });
+        $("#userID").click(function() {
+            document.getElementById("photos").innerHTML = "";
+            $("#searchFriendsID").text() === "Search using id";
+            return useridPictures();
+        });
 
-    $("#username").click(function() {
-         document.getElementById("photos").innerHTML = "";
-        $("#searchFriendsName").text() === "Username";
-        return usernamePictures();
-    });
+        $("#username").click(function() {
+             document.getElementById("photos").innerHTML = "";
+            $("#searchFriendsName").text() === "Username";
+            return usernamePictures();
+        });
 
-    $("#favorites").click(function() {
-        document.getElementById("photos").innerHTML = "";
-        $("#searchFriendsFav").text() === "Favorites";
-        return favoritePictures();
-    });
+        $("#favorites").click(function() {
+            document.getElementById("photos").innerHTML = "";
+            $("#searchFriendsFav").text() === "Favorites";
+            return favoritePictures();
+        });
 
-    $("#home").click(function() {
-        document.getElementById("photos").innerHTML = "";
-    });
+        $("#home").click(function() {
+            document.getElementById("photos").innerHTML = "";
+        });
 
-    $("#about").click(function() {
-        document.getElementById("photos").innerHTML = "";
+        $("#about").click(function() {
+            document.getElementById("photos").innerHTML = "";
+        });
     });
-});
+}
+
+loadAll();
+
 
 //begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
@@ -100,9 +106,45 @@ $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 //end signup/login passowrd/confirm password validation form
 /////////////////////////////
+
+
+/////// begin carousel //////
 ////////////////////////////
 
 
+var $overlay = $('<div id="overlay"></div>');
+var $image = $('<img>');
+// var imgSrc = this.imgSrc.replace(/_m/, '';
+
+$($overlay).append($image);
+$('body').append($overlay);
+
+
+$("body").delegate("a", "click", function(event) { 
+    event.preventDefault();
+});
+
+$(document).on("click", '#imageGallery a', function (event) {
+    event.preventDefault();
+
+    var $imgLocation = $(this).attr("href");
+    var $image = $('.image').children('img').attr('src');
+
+    console.log($imgLocation);
+    console.log($image);
+    // alert('this will pop up if it worked');
+
+
+    $overlay.show();
+});
+
+$overlay.click(function(){
+    $overlay.hide();
+});
+
+
+/////// end carousel //////
+////////////////////////////
 
 
 
