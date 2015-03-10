@@ -113,13 +113,15 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 
 
 var $overlay = $('<div id="overlay"></div>');
-var $image = $('<img>');
-// var imgSrc = this.imgSrc.replace(/_m/, '';
+var $image = $('<img />');
+
+// var src = this.src.replace(/_m/, '';
 
 $($overlay).append($image);
 $('body').append($overlay);
 
 
+//prevents even if run before ajax is returned
 $("body").delegate("a", "click", function(event) { 
     event.preventDefault();
 });
@@ -127,14 +129,13 @@ $("body").delegate("a", "click", function(event) {
 $(document).on("click", '#imageGallery a', function (event) {
     event.preventDefault();
 
-    var $imgLocation = $(this).attr("href");
-    var $image = $('.image').children('img').attr('src');
+    var $imgLocation = $(this).children('img').attr('src');
+    $image.attr('src', $imgLocation);
 
     console.log($imgLocation);
-    console.log($image);
+    
     // alert('this will pop up if it worked');
-
-
+    
     $overlay.show();
 });
 
