@@ -1,4 +1,6 @@
+//////////////////////////////////
 // Begin code for search pics  //
+
 var pictures = function() {
     var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
     $('form').submit(function(event) {
@@ -29,8 +31,9 @@ var pictures = function() {
 }
 // End code for search pics begin //
 ///////////////////////////////////
-//////////////////////////////////
 
+
+///////////////////////////////////
 // Begin code for search pics  //
 var searchPictures = function() {
     var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
@@ -66,10 +69,10 @@ var searchPictures = function() {
 }
 // End code for search pics begin //
 ////////////////////////////////////
+
+
+
 ///////////////////////////////////
-
-
-
 //Begin code for friends pics by id //
 var useridPictures = function() {
     $('form').submit(function(event) {
@@ -110,9 +113,9 @@ var useridPictures = function() {
 
 // End code for friends pics by id //
 ////////////////////////////////////
+
+
 ///////////////////////////////////
-
-
 //Begin code for friends pics by name //
 var usernamePictures = function() {
     $('form').submit(function(event) {
@@ -151,9 +154,9 @@ var usernamePictures = function() {
 }
 // End code for friends pics by name//
 ////////////////////////////////////
+
+
 ///////////////////////////////////
-
-
 // begin code for favorite pics //
 var favoritePictures = function() {
     $('form').submit(function(event) {
@@ -191,3 +194,4 @@ var favoritePictures = function() {
 }
 
 // end code for favorite pics //
+///////////////////////////////////
