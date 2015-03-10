@@ -28,6 +28,11 @@ button.close {
   text-align:center;
 }
 
+#overlay img {
+ margin-top: 20%; 
+}
+
+
 /* ///////////////////////////////////////////////////////////////////////////////////*/
 
 /* begin navbar rules */
@@ -195,12 +200,12 @@ a img {
   font-size: 1em;
   text-align: center;
   position: absolute;
-  background: #2F558E;
+  background: #fff;
   left: 105%;
   top: 1px;
   width: 300px;
   padding: 7px 10px;
-  color: #fff;
+  color: #9d9d9d;
 }
 
 .signupMessage:after, .emailMessage:after {
@@ -213,7 +218,7 @@ a img {
   position: absolute;
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
-  border-right-color: #2F558E;
+  border-right-color: #fff;
   border-width: 8px;
   margin-top: -8px;
 }
