@@ -1,3 +1,5 @@
+////////////////////////////////////////////////////////
+//begin loading getJSON calls//////////////////////////
 function loadAll(){
     $(document).ready(function() {
         
@@ -43,8 +45,10 @@ function loadAll(){
 }
 
 loadAll();
+//begin loading getJSON calls//////////////////////////
+////////////////////////////////////////////////////////
 
-
+////////////////////////////////////////////////////////
 //begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
 var $signupConfirmPassword = $("#signupConfirmPassword")
@@ -105,7 +109,7 @@ $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfir
 $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 //end signup/login passowrd/confirm password validation form
-/////////////////////////////
+////////////////////////////////////////////////////////////
 
 
 /////// begin carousel //////
