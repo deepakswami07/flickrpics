@@ -118,6 +118,7 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img />');
+// var $image = $('< class="img-responsive" img />');
 
 // var src = this.src.replace(/_m/, '';
 
