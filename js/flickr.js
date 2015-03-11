@@ -23,7 +23,7 @@ var pictures = function() {
                 photoHTML = photoHTML = '<p id="noMatch" class="lead text-danger"> No photos found to match your search word: ' + animal + '.</p>'
             }
             photoHTML += '</ul>';
-
+       
             $("#photos").html(photoHTML);
         }
         $.getJSON(flickrAPI, flickrOptions, flickrImages);
