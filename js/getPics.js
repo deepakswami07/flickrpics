@@ -114,17 +114,23 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 
 /////// begin carousel //////
 ////////////////////////////
-
-
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img />');
-// var $image = $('< class="img-responsive" img />');
 
-// var src = this.src.replace(/_m/, '';
 
-$($overlay).append($image);
+// $($overlay).append($image);
+var $modalFade = $('<div class="modal fade" tabindex="-1" role="dialog"></div>');
+var $modalDialog = $('<div class="modal-dialog"></div>');
+var $modalContent = $('<div style="background: rgba(0,0,0,0.5)" id="modal-content" class="modal-content"></div>');
+var $modalFooter = $('<div class="modal-footer"></div>');
+var $modalClose = $('<a class="btn btn-default" data-dismiss="modal">CLOSE</a>');               
+
+$($modalContent).append($image);
+$($overlay).append($modalContent);
+// $($overlay).append($modalDialog);
+// $($overlay).append($modalFade);
+$($overlay).append($modalClose);
 $('body').append($overlay);
-
 
 //prevents even if run before ajax is returned
 $("body").delegate("a", "click", function(event) { 
@@ -138,11 +144,6 @@ $(document).on("click", '#imageGallery a', function (event) {
     var $imgLocation = $imgLocation.replace(/_m/, "_z");
 
     $image.attr('src', $imgLocation);
-
-    console.log($imgLocation);
-    
-    // alert('this will pop up if it worked');
-    
     $overlay.show();
 });
 
@@ -150,16 +151,6 @@ $overlay.click(function(){
     $overlay.hide();
 });
 
-
-
-// document.getElementById('imageGallery').onclick = function (event) {
-//     event = event || window.event;
-//     var target = event.target || event.srcElement,
-//         link = target.src ? target.parentNode : target,
-//         options = {index: link, event: event},
-//         links = this.getElementsByTagName('$image');
-//     // blueimp.Gallery(links, options);
-// };
 /////// end carousel //////
 //////////////////////////// 
 

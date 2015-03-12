@@ -31,8 +31,6 @@ var pictures = function() {
 }
 // End code for search pics begin //
 ///////////////////////////////////
-
-
 ///////////////////////////////////
 // Begin code for search pics  //
 var searchPictures = function() {
