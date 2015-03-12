@@ -5,6 +5,12 @@ body {
   
 }
 
+#modal-content{
+  margin-top: 10%;
+  color: #000;
+}
+
+
 form {
   text-align: center;
 }
