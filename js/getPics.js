@@ -115,21 +115,13 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 /////// begin carousel //////
 ////////////////////////////
 var $overlay = $('<div id="overlay"></div>');
+var $modal = $('<div class="modal-content"></div>');
+var $close = $('<a href="#close" title="Close" class="close">X</a>');
 var $image = $('<img />');
 
-
-// $($overlay).append($image);
-var $modalFade = $('<div class="modal fade" tabindex="-1" role="dialog"></div>');
-var $modalDialog = $('<div class="modal-dialog"></div>');
-var $modalContent = $('<div style="background: rgba(0,0,0,0.5)" id="modal-content" class="modal-content"></div>');
-var $modalFooter = $('<div class="modal-footer"></div>');
-var $modalClose = $('<a class="btn btn-default" data-dismiss="modal">CLOSE</a>');               
-
-$($modalContent).append($image);
-$($overlay).append($modalContent);
-// $($overlay).append($modalDialog);
-// $($overlay).append($modalFade);
-$($overlay).append($modalClose);
+$($modal).append($image);
+$($modal).append($close);
+$($overlay).append($modal)
 $('body').append($overlay);
 
 //prevents even if run before ajax is returned
@@ -139,7 +131,6 @@ $("body").delegate("a", "click", function(event) {
 
 $(document).on("click", '#imageGallery a', function (event) {
     event.preventDefault();
-
     var $imgLocation = $(this).children('img').attr('src');
     var $imgLocation = $imgLocation.replace(/_m/, "_z");
 
@@ -155,6 +146,19 @@ $overlay.click(function(){
 //////////////////////////// 
 
 
+// var $modalFade = $('<div class="modal fade" tabindex="-1" role="dialog"></div>');
+// var $modalDialog = $('<div class="modal-dialog"></div>');
+// var $modalContent = $('<div id="modal-content" class="modal-content"></div>');
+// var $modalbody = $('<div class="modal-body"></div>');
+// var $modalFooter = $('<div class="modal-footer"></div>');
+// var $modalClose = $('<a class="btn btn-default" data-dismiss="modal">CLOSE</a>');               
+
+// $($modalContent).append($image);
+// $($overlay).append($modalbody)
+// $($overlay).append($modalContent);
+// $($overlay).append($modalDialog);
+// $($overlay).append($modalFade);
+// $($modalContent).append($modalClose);
 
 
 
