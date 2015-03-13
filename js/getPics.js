@@ -115,7 +115,7 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 /////// begin carousel //////
 ////////////////////////////
 var $overlay = $('<div class="container" id="overlay"></div>');
-var $modal = $('<div class="modal-content"><img /></div>');
+var $modal = $('<div class="modalContent" class="modal-content"></div>');
 var $close = $('<a href="#close" title="Close" class="closeImage">X</a>');
 var $image = $('<img />');
 
