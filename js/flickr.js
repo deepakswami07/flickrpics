@@ -190,6 +190,5 @@ var favoritePictures = function() {
         console.log($.getJSON(flickrAPI, flickrOptions, flickrImages));
     });
 }
-
 // end code for favorite pics //
 ///////////////////////////////////
