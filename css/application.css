@@ -44,35 +44,39 @@ button.close {
   background: -o-linear-gradient(#fff, #999);
 }
 
+.modal-content:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
 .modal-content > img {
   display: inline-flex;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -moz-inline-box;
   display: -ms-inline-flexbox;
-  max-height: 640px;
-  max-width: 640px;
-  text-align: center;
-  margin: auto auto;
+  max-height: 620px;
+  max-width: 620px;
+  overflow: hidden;
 }
 
-.close {
- /* background: #606061;*/
-  color: #000;
+.closeImage {
+  background: #fff;
+  color: #606061;
   line-height: 25px;
   position: absolute;
-  right:4px;
+  right:-10px;
   text-align: center;
-  top: 2px;
+  top: -12px;
   width: 24px;
-/*  text-decoration: none;
+  text-decoration: none;
   font-weight: bold;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
-  border-radius: 12px;*/
- /* -moz-box-shadow: 1px 1px 3px #000;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
   -webkit-box-shadow: 1px 1px 3px #000;
-  box-shadow: 1px 1px 3px #000;*/
+  box-shadow: 1px 1px 3px #000;
 }
 
 /*.close:hover { background: #D6231E; }*/
