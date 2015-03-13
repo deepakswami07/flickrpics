@@ -142,23 +142,9 @@ $overlay.click(function(){
     $overlay.hide();
 });
 
-/////// end carousel //////
+/////// end lightbox //////
 //////////////////////////// 
 
-
-// var $modalFade = $('<div class="modal fade" tabindex="-1" role="dialog"></div>');
-// var $modalDialog = $('<div class="modal-dialog"></div>');
-// var $modalContent = $('<div id="modal-content" class="modal-content"></div>');
-// var $modalbody = $('<div class="modal-body"></div>');
-// var $modalFooter = $('<div class="modal-footer"></div>');
-// var $modalClose = $('<a class="btn btn-default" data-dismiss="modal">CLOSE</a>');               
-
-// $($modalContent).append($image);
-// $($overlay).append($modalbody)
-// $($overlay).append($modalContent);
-// $($overlay).append($modalDialog);
-// $($overlay).append($modalFade);
-// $($modalContent).append($modalClose);
 
 
 
