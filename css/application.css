@@ -17,9 +17,11 @@ button.close {
   text-align: center;
   }
 
+
 /* ///////////////////////////////////////////////////////////////////////////////////*/
 
-/* begin carousel rules */
+/* begin lightbox rules */
+
 #overlay {
   background:rgba(0,0,0,0.7);
   width:100%;
@@ -31,7 +33,7 @@ button.close {
   text-align:center;
 }
 
-.modal-content{
+.modalContent{
   width: 680px;
   height: 680px;
   position: relative;
@@ -44,12 +46,7 @@ button.close {
   background: -o-linear-gradient(#fff, #999);
 }
 
-.modal-content:target {
-  opacity:1;
-  pointer-events: auto;
-}
-
-.modal-content > img {
+.modalContent > img {
   display: inline-flex;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -57,7 +54,6 @@ button.close {
   display: -ms-inline-flexbox;
   max-height: 620px;
   max-width: 620px;
-  overflow: hidden;
 }
 
 .closeImage {
@@ -79,24 +75,19 @@ button.close {
   box-shadow: 1px 1px 3px #000;
 }
 
-/*.close:hover { background: #D6231E; }*/
+.closeImage:hover { color: #D6231E; }
 
 #overlay img {
  margin-top: 5%;
  padding: 10px 10px;
 }
-/* end carousel rules */
+/* begin lightbox rules */
+/* ////////////////// */
 
 
-
-/*.modal-body {
-  padding: 10px 10px;
-  margin: auto;
-  max-width: 100%;
- max-height: 100%;
-}*/
-
+/* ////////////////// */
 /* begin navbar rules */
+
 .main-header {
   font-family: 'Montserrat', sans-serif;
   line-height: .1;
@@ -245,12 +236,12 @@ form {
   background: #252525;
 }
 
-/*.image01 {
+.image01 {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}*/
+}
 
 .button-style {
   background-color: transparent;
