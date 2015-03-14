@@ -42,7 +42,7 @@ var searchPictures = function() {
         var animal = $searchField.val();
         var flickrOptions = {
             tags: animal,
-            per_page: 30,
+            per_page: 25,
             format: "json"
         };
         function flickrImages(data) {
@@ -84,7 +84,7 @@ var useridPictures = function() {
             api_key: apiKey,
             user_id: userId,
             safe_search: 1,
-            per_page: 30,
+            per_page: 25,
             format: "json"
         }
         function flickrImages(data) {
@@ -127,7 +127,7 @@ var usernamePictures = function() {
             api_key: apiKey,
             text: username,
             safe_search: 1, 
-            per_page: 30,
+            per_page: 25,
             format: "json"
         }
         function flickrImages(data) {
@@ -167,7 +167,7 @@ var favoritePictures = function() {
         var flickrOptions = {
             api_key: apiKey,
             user_id: userId,
-            per_page: 30,
+            per_page: 25,
             format: "json"
         }
         function flickrImages(data) {
