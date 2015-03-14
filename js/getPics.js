@@ -6,6 +6,7 @@ function loadAll(){
         $("#pictures").click(function() {
             document.getElementById("photos").innerHTML = "";
             $("#getPictures").text() === "Generate pics";
+            $('body').css('background-image', 'url("./images/image04.png")');
             window.onload = pictures();
             // return pictures();
          });
@@ -144,6 +145,13 @@ $overlay.click(function(){
 
 /////// end lightbox //////
 //////////////////////////// 
+
+
+$("#pictures").click(function(){
+
+// $('body').css('background-image', 'url("./images/image04.png")');
+    
+});
 
 
 
