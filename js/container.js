@@ -25,7 +25,6 @@ $picturesFormHTML += '</form>';
 ///////////////////////////
 
 
-
 //////////////////////////
 // begin ajax for search pics
 var $searchPicsHTML = " ";
@@ -195,13 +194,13 @@ $("#favorites").click(function() {
 $("#home").click(function(){
 	 document.getElementById("toFill").innerHTML = $home;
      document.getElementById("result").innerHTML = $homePicsFormHTML;
-     document.body.style.background = "url('images/image07.png')no-repeat, cover center, center";
 });
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
     document.getElementById("result").innerHTML = $aboutPicsFormHTML;
 });
+
 /// end append to HTML ///
 //////////////////////////
 
