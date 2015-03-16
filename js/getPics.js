@@ -6,9 +6,8 @@ function loadAll(){
         $("#pictures").click(function() {
             document.getElementById("photos").innerHTML = "";
             $("#getPictures").text() === "Generate pics";
-            $('body').css('background-image', 'url("./images/image04.png")');
-            window.onload = pictures();
-            // return pictures();
+            // window.onload = pictures();
+            return pictures();
          });
 
         $("#searchPics").click(function() {
@@ -116,7 +115,7 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 /////// begin carousel //////
 ////////////////////////////
 var $overlay = $('<div class="container" id="overlay"></div>');
-var $modal = $('<div class="modalContent" class="modal-content"></div>');
+var $modal = $('<div class="modalContent row" class="modal-content"></div>');
 var $close = $('<a href="#close" title="Close" class="closeImage">X</a>');
 var $image = $('<img />');
 
@@ -145,31 +144,6 @@ $overlay.click(function(){
 
 /////// end lightbox //////
 //////////////////////////// 
-
-
-$("#pictures").click(function(){
-
-// $('body').css('background-image', 'url("./images/image04.png")');
-    
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
