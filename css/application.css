@@ -16,6 +16,11 @@ body {
   -o-background-size: cover;
   }
 
+.img-responsive-height {
+  display: block;
+  width: auto;
+  max-height: 100%;
+}
 
 form {
   text-align: center;

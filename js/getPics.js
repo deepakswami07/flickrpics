@@ -116,13 +116,23 @@ $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
 ////////////////////////////
 var $overlay = $('<div class="container" id="overlay"></div>');
 var $modal = $('<div class="modalContent row" class="modal-content"></div>');
+var $ul = $('<ul></ul>');
+var $li = $('<li></li>');
 var $close = $('<a href="#close" title="Close" class="closeImage">X</a>');
-var $image = $('<img />');
+var $image = $('<img/>');
 
 $($modal).append($image);
-$($modal).append($close);
+$($modal).append($image);
+$($li).append($close);
+$($ul).append($li);
+$($modal).append($ul);
 $($overlay).append($modal)
 $('body').append($overlay);
+
+// $($modal).append($image);
+// $($modal).append($close);
+// $($overlay).append($modal)
+// $('body').append($overlay);
 
 //prevents even if run before ajax is returned
 $("body").delegate("a", "click", function(event) { 
