@@ -13,9 +13,9 @@ var pictures = function() {
             if (data.items.length > 0) {
                 photoHTML = '<ul id="imageGallery">';
                 $.each(data.items, function(i, photos) {
-                    photoHTML += '<li class="col-sm-2 col-sm-2">';
+                    photoHTML += '<li class="col-sm-3 col-sm-3">';
                     photoHTML += '<a href="' + photos.link + '" class="image">';
-                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '<img src=" ' + photos.media.m + ' " width="100">';
                     photoHTML += '</a>';
                     photoHTML += '</li>';
                 });
@@ -50,9 +50,9 @@ var searchPictures = function() {
             if (data.items.length > 0) {
                 photoHTML = '<ul id="imageGallery">';
                 $.each(data.items, function(i, photos) {
-                    photoHTML += '<li class="col-sm-2 col-sm-2">';
+                    photoHTML += '<li class="col-sm-3 col-sm-3">';
                     photoHTML += '<a href="' + photos.link + '" class="image">';
-                    photoHTML += '<img src=" ' + photos.media.m + ' ">';
+                    photoHTML += '<img src=" ' + photos.media.m + ' " width="120">';
                     photoHTML += '</a>';
                     photoHTML += '</li>';
                 });
@@ -84,7 +84,7 @@ var useridPictures = function() {
             api_key: apiKey,
             user_id: userId,
             safe_search: 1,
-            per_page: 25,
+            per_page: 20,
             format: "json"
         }
         function flickrImages(data) {
@@ -93,9 +93,9 @@ var useridPictures = function() {
                 friendsHTML += '<ul id="imageGallery">';
                 $.each(data.photos.photo, function(i,item) {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
-                    friendsHTML += '<li class="col-sm-2 col-sm-2">';
+                    friendsHTML += '<li class="col-sm-3 col-sm-3">';
                     friendsHTML += '<a href="https://www.flickr.com/photos/' + userId + '/' + item.id + ' " class="image">';
-                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
+                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images" width="120">';
                     friendsHTML += '</li>';
                 });
             } else {
@@ -136,9 +136,9 @@ var usernamePictures = function() {
                 friendsHTML += '<ul id="imageGallery">';
                 $.each(data.photos.photo, function(i,item) {
                     var friendsPicsURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
-                    friendsHTML += '<li class="col-sm-2 col-sm-2">';
+                    friendsHTML += '<li class="col-sm-3 col-sm-3">';
                     friendsHTML += '<a href="https://www.flickr.com/photos/' + username + '/' + item.id + ' " class="image">';
-                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images">';
+                    friendsHTML += '<img src=" ' + friendsPicsURL + ' " class="images" width="120">';
                     friendsHTML += '</li>';
                 });
             } else {
@@ -176,9 +176,9 @@ var favoritePictures = function() {
                 friendsFavHTML += '<ul id="imageGallery">';
                 $.each(data.photos.photo, function(i,item) {
                  var friendsFavURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg'
-                friendsFavHTML += '<li class="col-sm-2 col-sm-2">';
+                friendsFavHTML += '<li class="col-sm-3 col-sm-3">';
                 friendsFavHTML += '<a href="https://www.flickr.com/photos/' + item.owner + '/' + item.id + ' " class="image">';
-                friendsFavHTML += '<img src=" ' + friendsFavURL + ' " class="images">';
+                friendsFavHTML += '<img src=" ' + friendsFavURL + ' " class="images" width="120">';
                 friendsFavHTML += '</li>';
                 });
             } else {

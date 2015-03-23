@@ -142,7 +142,7 @@ $("body").delegate("a", "click", function(event) {
 $(document).on("click", '#imageGallery a', function (event) {
     event.preventDefault();
     var $imgLocation = $(this).children('img').attr('src');
-    var $imgLocation = $imgLocation.replace(/_m/, "_b");
+    var $imgLocation = $imgLocation.replace(/_m/, "_z");
 
     $image.attr('src', $imgLocation);
     $overlay.show();
