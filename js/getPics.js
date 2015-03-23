@@ -153,7 +153,6 @@ $overlay.click(function(){
 });
 
 /////// end lightbox //////
-//////////////////////////// 
 
 
 
