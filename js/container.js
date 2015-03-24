@@ -1,6 +1,7 @@
 //////////////////////////
 // begin ajax for random pics
 var $picturesHTML = " ";
+$picturesHTML += '<div class="">';
 $picturesHTML += '<section>';
 $picturesHTML += '<h1 class="main-header">GENERATE</h1>';
 $picturesHTML += '<h1 class="second-header-picutres">random pictures</h1>';
@@ -8,6 +9,7 @@ $picturesHTML += '<article>';
 $picturesHTML += '<p class="description lead">Click on the generate pics button to see recent photos that have been posted on Flickr.</p>';
 $picturesHTML += '</article>';
 $picturesHTML += '</section>';
+$picturesHTML += '<section>';
 
 var $picturesFormHTML = " ";
 $picturesFormHTML += '<form class="navbar-form navbar-center" role="picutres">';
@@ -192,7 +194,7 @@ $("#favorites").click(function() {
 });
 
 $("#home").click(function(){
-	 document.getElementById("toFill").innerHTML = $home;
+     document.getElementById("toFill").innerHTML = $home;
      document.getElementById("result").innerHTML = $homePicsFormHTML;
 });
 
