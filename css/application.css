@@ -1,5 +1,5 @@
 body {
-   /* width:100%;*/
+    width:100%;
     background:#252525
 }
 
@@ -30,6 +30,32 @@ form {
 }
 
 
+/* //////////////////////// */
+/* begin form focus rules */
+input:focus::-webkit-input-placeholder {
+    color:transparent
+}
+
+input:focus:-moz-placeholder {
+    color:transparent
+}
+
+input:focus::-moz-placeholder {
+    color:transparent
+}
+
+input:focus:-ms-input-placeholder {
+    color:transparent
+}
+/* begin form focus rules */
+/* //////////////////////// */
+
+/*#links.container {
+
+padding-right: 0px;
+
+}*/
+
 /* ///////////////////////*/
 /* begin signup and login rules */
 li>a,label {
@@ -47,7 +73,9 @@ li>a,label {
 /* ///////////////////////*/
 /* end signup and login rules */
 
-
+#modal-header>h1 {
+  font-family: 'Montserrat',sans-serif;
+}
 /* /////////////////////////////////////////*/
 /* begin headeing and second heading rules */
 
@@ -360,9 +388,9 @@ margin-top: 2%;
   font-weight: 700;
   padding-top: 10%;
 }*/
-form {
-/*  background: #252525;*/
-}
+/*form {
+  background: #252525;
+}*/
 
 /*.image01 {
   width: 100%;
@@ -474,26 +502,8 @@ form {
 }*/
 
 /* begin form message rules */
-/* //////////////////////// */
-/* begin form focus rules */
-input:focus::-webkit-input-placeholder {
-    color:transparent
-}
 
-input:focus:-moz-placeholder {
-    color:transparent
-}
 
-input:focus::-moz-placeholder {
-    color:transparent
-}
-
-input:focus:-ms-input-placeholder {
-    color:transparent
-}
-
-/* begin form focus rules */
-/* //////////////////////// */
 /* //////////////////////// */
 /* extra rules */
 /*#toFill {
