@@ -4,39 +4,37 @@ function loadAll() {
     $(document).ready(function() {
         // decided to not use pictures button //
         $("#pictures").click(function() {
-            // document.getElementById("photos").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
             $("#getPictures").text() === "Generate pics";
             // window.onload = pictures();
             return pictures();
         });
         $("#searchPics").click(function() {
-            // document.getElementById("photos").innerHTML = "";
+             document.getElementById("links").innerHTML = "";
             $("#search").text() === "Search";
             return searchPictures();
         });
         $("#userID").click(function() {
-            // document.getElementById("photos").innerHTML = "";
+             document.getElementById("links").innerHTML = "";
             $("#searchFriendsID").text() ===
                 "Search using id";
             return useridPictures();
         });
         $("#username").click(function() {
-            // document.getElementById("photos").innerHTML = "";
+             document.getElementById("links").innerHTML = "";
             $("#searchFriendsName").text() === "Username";
             return usernamePictures();
         });
         $("#favorites").click(function() {
-            // document.getElementById("photos").innerHTML = "";
+             document.getElementById("links").innerHTML = "";
             $("#searchFriendsFav").text() === "Favorites";
             return favoritePictures();
         });
         $("#home").click(function() {
-            document.getElementById("photos").innerHTML =
-                "";
+             document.getElementById("links").innerHTML = "";
         });
         $("#about").click(function() {
-            document.getElementById("photos").innerHTML =
-                "";
+             document.getElementById("links").innerHTML = "";
         });
     });
 }
@@ -104,3 +102,10 @@ $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(
     checkSignupConfirmPassword);
 $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
+
+
+// begin navbar collapse on selection ///
+$('.navbar-collapse').click('li', function() {
+  $('.navbar-collapse').collapse('hide');
+});
+// begin navbar collapse on selection ///

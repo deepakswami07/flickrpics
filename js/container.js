@@ -95,7 +95,7 @@ $favoritesPicsFormHTML += '<form class="navbar-form navbar-center" role="searchF
 $favoritesPicsFormHTML += '<div class="form-group">';
 $favoritesPicsFormHTML += '<label for="searchFriendsFav"></label>';
 $favoritesPicsFormHTML += '<div class="form-group">';
-$favoritesPicsFormHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="favorites">';
+$favoritesPicsFormHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="username or id">';
 $favoritesPicsFormHTML += ' <button class="button-style" id="submit" type="submit" value="search">';
 $favoritesPicsFormHTML += '<span class="glyphicon glyphicon-search"></span>';
 $favoritesPicsFormHTML += '</button>';
