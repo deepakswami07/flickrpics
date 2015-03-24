@@ -3,7 +3,7 @@ body {
     background:#252525
 }
 
-/*body {
+body {
     background:-moz-linear-gradient(top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%),no-repeat 0 0,url(url(../images/goldengate.png)) repeat 0 0;
     background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0.9)),color-stop(100%,rgba(0,0,0,0.9))),url(../images/goldengate.png) no-repeat 0 0;
     background:-o-linear-gradient(top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%),url(url(../images/goldengate.png)) no-repeat 0 0;
@@ -15,7 +15,228 @@ body {
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover
-}*/
+}
+
+form {
+    text-align:center
+}
+
+#noMatch {
+    text-align:center
+}
+
+.closeImage:hover {
+    color:#D6231E
+}
+
+
+/* ///////////////////////*/
+/* begin signup and login rules */
+li>a,label {
+    position:relative;
+    color:#9d9d9d;
+    text-shadow:0 -1px 0 rgba(0,0,0,.25);
+    display:inline;
+    text-decoration:none;
+    font-family:'Lato',sans-serif;
+    font-size:1em;
+    letter-spacing:.1em;
+    font-weight:700;
+    line-height:145%
+}
+/* ///////////////////////*/
+/* end signup and login rules */
+
+
+/* /////////////////////////////////////////*/
+/* begin headeing and second heading rules */
+
+.main-header {
+    font-family:'Montserrat',sans-serif;
+    line-height:.1;
+    font-size:3.5em;
+    text-align:center;
+    color:#D6231E;
+    font-weight:700;
+    padding-top:6%
+}
+
+.second-header-picutres {
+    font-family:'Montserrat',sans-serif;
+    font-size:2.00em;
+    letter-spacing:2.78px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px
+}
+
+.second-header-search {
+    font-family:'Montserrat',sans-serif;
+    font-size:2.00em;
+    letter-spacing:2.1px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-1px
+}
+
+.second-header-userid {
+    font-family:'Montserrat',sans-serif;
+    font-size:2.00em;
+    letter-spacing:2.3px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px
+}
+
+.second-header-favorites {
+    font-family:'Montserrat',sans-serif;
+    font-size:2.34375em;
+    letter-spacing:1.9px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px
+}
+
+.second-header-about {
+    font-family:'Montserrat',sans-serif;
+    font-size:2.34375em;
+    letter-spacing:2.2px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-5px
+}
+
+
+
+/* /////////////////////////////////////////*/
+/* begin headeing and second heading rules */
+
+
+/* ///////////////////////*/
+/* begin paragraph rules */
+#d-picture {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+#d-home {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+#d-home-main {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+#d-search {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+#d-id {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+#d-favorite {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+#d-about {
+  font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+/* ///////////////////////*/
+/* end paragraph rules */
+
 
 /*.img-responsive-height {
     display:block;
@@ -23,17 +244,9 @@ body {
     max-height:100%
 }*/
 
-/*form {
-    text-align:center
-}*/
-
-/*
-button.close {
+/* button.close {
   color: #000;
 }*/
-#noMatch {
-    text-align:center
-}
 
 /* ///////////////////////////////////////////////////////////////////////////////////*/
 /* begin lightbox rules */
@@ -87,9 +300,6 @@ button.close {
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }*/
-.closeImage:hover {
-    color:#D6231E
-}
 
 /*#overlay img {
 margin-top: 2%;
@@ -100,65 +310,11 @@ margin-top: 2%;
 /* ////////////////// */
 /* ////////////////// */
 /* begin navbar rules */
-.main-header {
-    font-family:'Montserrat',sans-serif;
-    line-height:.1;
-    font-size:3.5em;
-    text-align:center;
-    color:#D6231E;
-    font-weight:700;
-    padding-top:6%
-}
 
-/* ////////////////// */
-/* begin second-header*/
+
+
+
 /*.second-header {
-    font-family:'Montserrat',sans-serif;
-    font-size:2.34375em;
-    letter-spacing:3.8px;
-    line-height:.64375em;
-    text-align:center;
-    color:#fff;
-    font-weight:300;
-    margin-top:-10px
-}*/
-
-.second-header-picutres {
-    font-family:'Montserrat',sans-serif;
-    font-size:2.00em;
-    letter-spacing:2.78px;
-    line-height:.64375em;
-    text-align:center;
-    color:#fff;
-    font-weight:300;
-    margin-top:-10px;
-    margin-left:8px
-}
-
-/*.second-header-search {
-    font-family:'Montserrat',sans-serif;
-    font-size:2.34375em;
-    letter-spacing:4px;
-    line-height:.64375em;
-    text-align:center;
-    color:#fff;
-    font-weight:300;
-    margin-top:-10px;
-    margin-left:6px
-}*/
-
-/*.second-header-userid {
-    font-family:'Montserrat',sans-serif;
-    font-size:2.34375em;
-    letter-spacing:3.8px;
-    line-height:.64375em;
-    text-align:center;
-    color:#fff;
-    font-weight:300;
-    margin-top:-10px;
-    margin-left:1px
-}
-
 .second-header-username {
     font-family:'Montserrat',sans-serif;
     font-size:2.34375em;
@@ -170,61 +326,23 @@ margin-top: 2%;
     margin-top:-10px;
     margin-left:3px
 }
-
-.second-header-favorites {
     font-family:'Montserrat',sans-serif;
     font-size:2.34375em;
-    letter-spacing:6.9px;
+    letter-spacing:3.8px;
     line-height:.64375em;
     text-align:center;
     color:#fff;
     font-weight:300;
-    margin-top:-10px;
-    margin-left:4px
-}
-
-.second-header-about {
-    font-family:'Montserrat',sans-serif;
-    font-size:2.34375em;
-    letter-spacing:6.9px;
-    line-height:.64375em;
-    text-align:center;
-    color:#fff;
-    font-weight:300;
-    margin-top:-10px;
-    margin-left:3px
+    margin-top:-10px
 }*/
+
+
+
+
+
 
 /* end second-header*/
 /* ////////////////// */
-./*description {
-    font-family:'Lato',sans-serif;
-    line-height:145%;
-    text-align:center;
-    color:#B0B0B5;
-    color: #424249;
-    width:375px;
-    font-size:1.5em;
-    font-weight:100;
-    margin:20px auto;
-    padding:10px 0 6px;
-    letter-spacing:.2em;
-    text-transform:lowercase;
-    font-variant:small-caps
-}*/
-/*
-li>a,label {
-    position:relative;
-    color:#9d9d9d;
-    text-shadow:0 -1px 0 rgba(0,0,0,.25);
-    display:inline;
-    text-decoration:none;
-    font-family:'Lato',sans-serif;
-    font-size:1em;
-    letter-spacing:.1em;
-    font-weight:700;
-    line-height:145%
-}*/
 
 /*ul li {
   list-style-type: none;
