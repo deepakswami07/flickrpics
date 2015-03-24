@@ -283,13 +283,16 @@ form {
 /* //////////////////////// */
 /* //////////////////////// */
 
-
+.col-sm-12 {
+  width: 10%;
+}
 
 /* begin photo/image rules */
 #photoholder{
     display: block;
     margin : auto auto;
-    width: 100%;
+    width: 80%;
+    
 }
 
 #photos .image {
@@ -298,11 +301,11 @@ form {
   display: -webkit-inline-flex;
   display: -moz-inline-box;
   display: -ms-inline-flexbox;
-  min-height: 200px;
+  min-height: 165px;
   background: #303030;
   text-align: center;
-  height: 215px;
-  width: 200px;
+  height: 165px;
+  width: 150px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;

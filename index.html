@@ -1,251 +1,280 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
+    <!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
     <title>Flickrpics</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="image/gif">
-    <meta http-equiv="content-script-type" content="application/javascript">
+    <meta name="description" content="Flickrpics is about keep your finger on the pulse of the latest picture trends on flickr. search for the most recent posts on flickr by category, friends or your friend’s favorites.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans|Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/application.css">
-    <!-- [if lt IE 9]
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-</script>
-[endif] -->
+    <!-- <link rel="stylesheet" href="css/application.css"> -->
 
-
+    <link rel="stylesheet" href="css/demo.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <!-- <div class="full masthead">
-            <header "page-header">
-                <h3>Flickrpics</h3>
-            </header><br/> -->
-          
-            <!-- <nav class="navbar-fixed nav nav-tabs nav-justified">
-                <ul class="nav nav-tabs nav-justified">
-                </ul>
-            </nav> -->
+    <!-- navbar begin -->
+    <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <ul class="nav nav-pills pull-right">
+            <li><a data-toggle="modal" href="#signup"><span class="glyphicon glyphicon-user"></span> SIGN UP</a>
+            </li>
+            <li><a data-toggle="modal" href="#login">LOG IN</a>
+            </li>
+        </ul>
+        <!-- <div  class="navbar navbar-inverse navbar-fixed"> -->
+
+        <div class="container full masthead pull-left">
+            <div class="row-fluid">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a id="home" href="#"> HOME</a>
+                        </li>
+                        <li><a id="pictures" href="#">TODAY'S PICTURES</a>
+                        </li>
+                        <li><a id="username" href="#">SEARCH</a>
+                        </li>
+                        <li><a id="userID" href="#">USERID</a>
+                        </li>
+                        <li><a id="favorites" href="#">USER FAVORITES</a>
+                        </li>
+                        </li>
+                        <li><a data-toggle="modal" href="#contact">CONTACT</a>
+                        </li>
+                        <li><a id="about" href="#">ABOUT</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  navbar end    -->
+
+    <!--  begin contact modal -->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h1 id="modal-header">FLICKRPICS</h1>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="contactName" class="col-lg-2 control-label"></label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="contactName" placeholder="FULL NAME">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="col-lg-2 control-label"></label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="col-lg-2 control-label"></label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" rows="8" id="message" placeholder="YOUR MESSAGE"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-default" data-dismiss="modal">CLOSE</a>
+                        <button type="submit" class="btn btn-default" data-dismiss="modal">SEND</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--  end contact modal  -->
+
+
+    <!--  begin signup modal -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form id="signupForm" class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h1 id="modal-header">FLICKRPICS</h1>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="signupEmail" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" id="signupEmail" data-required="required" placeholder="EMAIL">
+                                <p class="emailMessage">Enter a valid email</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupPassword" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" id="signupPassword" data-required="required" placeholder="PASSWORD">
+                                <p class="signupMessage">Enter a password longer than 4 characters</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupConfirmPassword" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" id="signupConfirmPassword" data-required="required" placeholder="CONFIRM PASSOWRD">
+                                <p class="signupMessage">Please confirm your password</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-default" data-dismiss="modal">CLOSE</a>
+                        <button id="signupSubmit" type="submit" class="btn btn-default" data-dismiss="modal">SEND</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--  end signup modal  -->
+
+    <!--  begin login modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form id="loginForm" class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h1 id="modal-header">FLICKRPICS</h1>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="loginEmail" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" id="loginEmail" data-required="required" placeholder="EMAIL">
+                                <p class="emailMessage">Enter a valid email</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" id="password" data-required="required" placeholder="PASSWORD">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-default" data-dismiss="modal">CLOSE</a>
+                        <button type="submit" class="btn btn-default" data-dismiss="modal">SEND</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--  end login modal  -->
+    <section id="toFill" class="container">
+        <h1 class="main-header">FLICKRPICS</h1>
+        <article>
+            <p class="description">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....
+            </p>
+
+        </article>
+    </section>
+
+    <div id="result">
+    </div>
+    <div class="container">
+
+        <form class="form-inline">
+            <div class="form-group">
+                <button id="image-gallery-button" type="button" class="btn btn-primary btn-lg">
+                    <i class="glyphicon glyphicon-picture"></i> Launch Image Gallery
+                </button>
+            </div>
+        </form>
+    </div>
+        <br>
+        <!-- The container for the list of example images -->
+        <div class="container" id="links"></div>
+        <br>
         </div>
 
-        <!-- navbar begin -->
-        <div  style="border-radius:0px" class="navbar navbar-inverse navbar-fixed">
-            <ul class="nav nav-pills pull-right">
-                <li><a data-toggle="modal" href="#signup"><span class="glyphicon glyphicon-user"></span> SIGN UP</a>
-                </li>
-                <li><a data-toggle="modal"  href="#login">LOG IN</a>
-                </li>
-            </ul>
-            <!-- <div  class="navbar navbar-inverse navbar-fixed"> -->
-
-            <div class="container-fluid full masthead pull-left">
-                <div class="row-fluid">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li><a id="home" href="#"> HOME</a>
-                            </li>
-                            <li><a id="pictures" href="#">PICTURES</a>
-                            </li>
-                            <li><a id="searchPics" href="#">SEARCH</a>
-                            </li>
-                            <li><a id="userID" href="#">USERID</a>
-                            </li>
-                            <li><a id="username" href="#">USERNAME</a>
-                            </li>
-                            <li><a id="favorites" href="#">FAVORITES</a>
-                            </li>
-                            </li>
-                            <li><a data-toggle="modal" href="#contact">CONTACT</a>
-                            </li>
-                            <li><a id="about" href="#">ABOUT</a>
-                        </ul>
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true" class="closeImage">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <!--  navbar end    -->
-        <!--  begin contact modal -->
-        <div class="modal fade" id="contact" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
+    </div>
 
-                    <form class="form-horizontal">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h1 id="modal-header">FLICKRPICS</h1>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label for="contactName" class="col-lg-2 control-label"></label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="contactName" placeholder="FULL NAME">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email" class="col-lg-2 control-label"></label>
-                                <div class="col-lg-10">
-                                    <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message" class="col-lg-2 control-label"></label>
-                                <div class="col-lg-10">
-                                    <textarea class="form-control" rows="8" id="message" placeholder="YOUR MESSAGE"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <a class="btn btn-default" data-dismiss="modal">CLOSE</a>
-                            <button type="submit" class="btn btn-default" data-dismiss="modal">SEND</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-        <!--  end contact modal  -->
-
-
-        <!--  begin signup modal -->
-        <div class="modal fade" id="signup" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <form id="signupForm" class="form-horizontal">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h1 id="modal-header">FLICKRPICS</h1>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label for="signupEmail" class="col-md-2 control-label"></label>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" id="signupEmail" data-required="required" placeholder="EMAIL">
-                                    <p class="emailMessage">Enter a valid email</p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="signupPassword" class="col-md-2 control-label"></label>
-                                <div class="col-md-6">
-                                    <input type="password" class="form-control" id="signupPassword" data-required="required" placeholder="PASSWORD">
-                                    <p class="signupMessage">Enter a password longer than 4 characters</p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="signupConfirmPassword" class="col-md-2 control-label"></label>
-                                <div class="col-md-6">
-                                    <input type="password" class="form-control" id="signupConfirmPassword" data-required="required" placeholder="CONFIRM PASSOWRD">
-                                    <p class="signupMessage">Please confirm your password</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <a class="btn btn-default" data-dismiss="modal">CLOSE</a>
-                            <button id="signupSubmit" type="submit" class="btn btn-default" data-dismiss="modal">SEND</button>
-                        </div>
-                    </form>
-                    
-                </div>
-            </div>
-        </div>
-        <!--  end signup modal  -->
-
-        <!--  begin login modal -->
-        <div class="modal fade" id="login" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <form id="loginForm" class="form-horizontal">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h1 id="modal-header">FLICKRPICS</h1>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label for="loginEmail" class="col-md-2 control-label"></label>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" id="loginEmail" data-required="required" placeholder="EMAIL">
-                                    <p class="emailMessage">Enter a valid email</p>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password" class="col-md-2 control-label"></label>
-                                <div class="col-md-6">
-                                    <input type="password" class="form-control" id="password" data-required="required" placeholder="PASSWORD">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <a class="btn btn-default" data-dismiss="modal">CLOSE</a>
-                            <button type="submit" class="btn btn-default" data-dismiss="modal">SEND</button>
-                        </div>
-                    </form>
-                    
-                </div>
-            </div>
-        </div>
-        <!--  end login modal  -->
-
-        <!-- begin carousel -->
-        
-        <!-- end carousel -->
-       
-        <section id="toFill" class="container">
-            <h1 class="main-header">FLICKRPICS</h1>
-            <article>
-                <p class="description">Click on pictures to see randon pictures or do search for pictures, friends pics or friends favorites....
-                </p>
-                
-            </article>
-        </section>
-
-        <div id="result">
-        </div>
-    
-        <!--  container begin -->
-        <div id="photoholder" class="container full masthead">
-            <div id="photos"></div>
-        </div>
-        <!--  container end  -->
-</div>
-    <!--  footer begin -->
     <footer id="footer">
-        <p class="nav-center">&copy; 2014 flickrpics. All rights reserved.</p>
+        <p class="nav-center">&copy; 2015 flickrpics. All rights reserved.</p>
     </footer>
     <!--  footer end -->
-    
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="js/bootstrap-image-gallery.js"></script>
+    <script src="js/demo.js"></script>
     <script src="js/getPics.js" type="application/javascript"></script>
     <script src="js/flickr.js" type="application/javascript"></script>
     <script src="js/container.js" type="application/javascript"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js""></script>
-
+    <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
