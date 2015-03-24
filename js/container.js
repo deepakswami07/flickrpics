@@ -60,7 +60,7 @@ $useridHTML += '<section>';
 $useridHTML += '<h1 class="main-header">FRIEND\'S</h1>';
 $useridHTML += '<h1 class="second-header-userid">pics by userid</h1>';
 $useridHTML += '<article>';
-$useridHTML += '<p id="d-id">Too busy to joint Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in the name of your friend and see what their most recent posts are.</p>';
+$useridHTML += '<p id="d-id">Too busy to join Flickr but you want to stay connected to your friends by viewing their recent pictures? Type in your friend"\s userid and see the most recent posts.</p>';
 $useridHTML += '</article>';
 $useridHTML += '</section>';
 
