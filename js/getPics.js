@@ -1,53 +1,48 @@
 ////////////////////////////////////////////////////////
 //begin loading getJSON calls//////////////////////////
-function loadAll(){
+function loadAll() {
     $(document).ready(function() {
-        
+        // decided to not use pictures button //
         $("#pictures").click(function() {
-            document.getElementById("photos").innerHTML = "";
+            // document.getElementById("photos").innerHTML = "";
             $("#getPictures").text() === "Generate pics";
             // window.onload = pictures();
             return pictures();
-         });
-
+        });
         $("#searchPics").click(function() {
-            document.getElementById("photos").innerHTML = "";
+            // document.getElementById("photos").innerHTML = "";
             $("#search").text() === "Search";
             return searchPictures();
         });
-
         $("#userID").click(function() {
-            document.getElementById("photos").innerHTML = "";
-            $("#searchFriendsID").text() === "Search using id";
+            // document.getElementById("photos").innerHTML = "";
+            $("#searchFriendsID").text() ===
+                "Search using id";
             return useridPictures();
         });
-
         $("#username").click(function() {
-             document.getElementById("photos").innerHTML = "";
+            // document.getElementById("photos").innerHTML = "";
             $("#searchFriendsName").text() === "Username";
             return usernamePictures();
         });
-
         $("#favorites").click(function() {
-            document.getElementById("photos").innerHTML = "";
+            // document.getElementById("photos").innerHTML = "";
             $("#searchFriendsFav").text() === "Favorites";
             return favoritePictures();
         });
-
         $("#home").click(function() {
-            document.getElementById("photos").innerHTML = "";
+            document.getElementById("photos").innerHTML =
+                "";
         });
-
         $("#about").click(function() {
-            document.getElementById("photos").innerHTML = "";
+            document.getElementById("photos").innerHTML =
+                "";
         });
     });
 }
-
 loadAll();
 //begin loading getJSON calls//////////////////////////
 ////////////////////////////////////////////////////////
-
 ////////////////////////////////////////////////////////
 //begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
@@ -55,126 +50,57 @@ var $signupConfirmPassword = $("#signupConfirmPassword")
 var $signupEmail = $("#signupEmail");
 var $loginEmail = $("#loginEmail");
 
-function isSignupPasswordValid(){
+function isSignupPasswordValid() {
     return $signupPassword.val().length > 4;
 }
 
-function areSignupPasswordConfirmMatching(){
+function areSignupPasswordConfirmMatching() {
     return $signupPassword.val() === $signupConfirmPassword.val();
 }
 
-function isEmailValid(){
+function isEmailValid() {
     var emailPattern = new RegExp(/(.+)@(.+){2,}\.(.+){2,}/);
     var email = $signupEmail.val();
     var email = $loginEmail.val();
     return emailPattern.test(email);
 }
-
 $("#signupForm p").hide();
 $("#loginForm p").hide();
 
-function checkSignupPassword(){
-    if( isSignupPasswordValid() ){
+function checkSignupPassword() {
+    if (isSignupPasswordValid()) {
         $signupPassword.next().hide();
     } else {
         $signupPassword.next().show();
     }
 }
 
-function checkSignupConfirmPassword(){
-    if( areSignupPasswordConfirmMatching() ){
+function checkSignupConfirmPassword() {
+    if (areSignupPasswordConfirmMatching()) {
         $signupConfirmPassword.next().hide();
     } else {
         $signupConfirmPassword.next().show();
     }
 }
 
-function checkSignupEmail(){
-    if( isEmailValid() ){
+function checkSignupEmail() {
+    if (isEmailValid()) {
         $signupEmail.next().hide();
     } else {
         $signupEmail.next().show();
     }
 }
 
-function checkLoginEmail(){
-    if( isEmailValid() ){
+function checkLoginEmail() {
+    if (isEmailValid()) {
         $loginEmail.next().hide();
     } else {
         $loginEmail.next().show();
     }
 }
-$signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(checkSignupConfirmPassword);
-$signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(checkSignupConfirmPassword);
+$signupPassword.focus(checkSignupPassword).keyup(checkSignupPassword).keyup(
+    checkSignupConfirmPassword);
+$signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(
+    checkSignupConfirmPassword);
 $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
-//end signup/login passowrd/confirm password validation form
-////////////////////////////////////////////////////////////
-
-
-/////// begin carousel //////
-////////////////////////////
-var $overlay = $('<div class="container" id="overlay"></div>');
-var $modal = $('<div class="modalContent row" class="modal-content"></div>');
-var $ul = $('<ul></ul>');
-var $li = $('<li></li>');
-var $close = $('<a href="#close" title="Close" class="closeImage">X</a>');
-var $image = $('<img/>');
-
-$($modal).append($image);
-$($modal).append($image);
-$($li).append($close);
-$($ul).append($li);
-$($modal).append($ul);
-$($overlay).append($modal)
-$('body').append($overlay);
-
-// $($modal).append($image);
-// $($modal).append($close);
-// $($overlay).append($modal)
-// $('body').append($overlay);
-
-//prevents even if run before ajax is returned
-$("body").delegate("a", "click", function(event) { 
-    event.preventDefault();
-});
-
-$(document).on("click", '#imageGallery a', function (event) {
-    event.preventDefault();
-    var $imgLocation = $(this).children('img').attr('src');
-    var $imgLocation = $imgLocation.replace(/_m/, "_z");
-
-    $image.attr('src', $imgLocation);
-    $overlay.show();
-});
-
-$overlay.click(function(){
-    $overlay.hide();
-});
-
-/////// end lightbox //////
-
-// $(function () {
-//     'use strict';
-
-//     $('#borderless-checkbox').on('change', function () {
-//         var borderless = $(this).is(':checked');
-//         $('#blueimp-gallery').data('useBootstrapModal', !borderless);
-//         $('#blueimp-gallery').toggleClass('blueimp-gallery-controls', borderless);
-//     });
-
-    // $('#fullscreen-checkbox').on('change', function () {
-    //     $('#blueimp-gallery').data('fullScreen', $(this).is(':checked'));
-    // });
-
-    // $('#image-gallery-button').on('click', function (event) {
-    //     event.preventDefault();
-    //     blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
-    // });
-
-// });
-
-
-
-
-
