@@ -20,8 +20,37 @@ function checkPictures() {
     });
 }
 
-function enterSearch() {
+function checkSearch() {
+    $("#searchFriendsName").focus(function(){
+    if ($("#links > a").length > 0) {
+            console.log("hello");
+            $("#links > a").remove();
+        } else {
+           return usernamePictures();
+        }
+    });
+}
 
+function checkId() {
+    $("#searchFriendsID").focus(function(){
+    if ($("#links > a").length > 0) {
+            console.log("hello");
+            $("#links > a").remove();
+        } else {
+           return useridPictures();
+        }
+    });
+}
+
+function checkFavorite() {
+    $("#searchFriendsFav").focus(function(){
+    if ($("#links > a").length > 0) {
+            console.log("hello");
+            $("#links > a").remove();
+        } else {
+           return favoritePictures();
+        }
+    });
 }
 
 function loadAll() {
@@ -31,28 +60,19 @@ function loadAll() {
             checkPictures();
         });
 
-        $("#searchPics").click(function() {
+        $("#username").click(function() {
             document.getElementById("links").innerHTML = "";
-            $("#search").text() === "Search";
-            return searchPictures();
+            checkSearch()
         });
 
         $("#userID").click(function() {
             document.getElementById("links").innerHTML = "";
-            $("#searchFriendsID").text() ===
-                "Search using id";
-            return useridPictures();
+            checkId();
         });
 
-        $("#username").click(function() {
-            document.getElementById("links").innerHTML = "";
-            $("#searchFriendsName").text() === "Username";
-            return usernamePictures();
-        });
         $("#favorites").click(function() {
             document.getElementById("links").innerHTML = "";
-            $("#searchFriendsFav").text() === "Favorites";
-            return favoritePictures();
+            checkFavorite();
         });
 
         $("#home").click(function() {
