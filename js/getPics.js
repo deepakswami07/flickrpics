@@ -1,44 +1,73 @@
+// begin navbar collapse on selection ///
+$('.navbar-collapse').click('li', function() {
+    $('.navbar-collapse').collapse('hide');
+});
+// begin navbar collapse on selection ///
+
+
 ////////////////////////////////////////////////////////
 //begin loading getJSON calls//////////////////////////
+function checkPictures() {
+    $("#getPictures").click(function() {
+        // $("#getPictures").text() === "Generate pics";
+        if ($("#links > a").length > 0) {
+            console.log("hello");
+            // console.log($("#links").attr("href").length > 0 );
+            $("#links > a").remove();
+        } else {
+            return pictures();
+        }
+    });
+}
+
+function enterSearch() {
+
+}
+
 function loadAll() {
     $(document).ready(function() {
-        // decided to not use pictures button //
         $("#pictures").click(function() {
             document.getElementById("links").innerHTML = "";
-            $("#getPictures").text() === "Generate pics";
-            // window.onload = pictures();
-            return pictures();
+            checkPictures();
         });
+
         $("#searchPics").click(function() {
-             document.getElementById("links").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
             $("#search").text() === "Search";
             return searchPictures();
         });
+
         $("#userID").click(function() {
-             document.getElementById("links").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
             $("#searchFriendsID").text() ===
                 "Search using id";
             return useridPictures();
         });
+
         $("#username").click(function() {
-             document.getElementById("links").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
             $("#searchFriendsName").text() === "Username";
             return usernamePictures();
         });
         $("#favorites").click(function() {
-             document.getElementById("links").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
             $("#searchFriendsFav").text() === "Favorites";
             return favoritePictures();
         });
+
         $("#home").click(function() {
-             document.getElementById("links").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
         });
+
         $("#about").click(function() {
-             document.getElementById("links").innerHTML = "";
+            document.getElementById("links").innerHTML = "";
         });
     });
 }
+
 loadAll();
+
+
 //begin loading getJSON calls//////////////////////////
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
@@ -102,10 +131,3 @@ $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(
     checkSignupConfirmPassword);
 $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
-
-
-// begin navbar collapse on selection ///
-$('.navbar-collapse').click('li', function() {
-  $('.navbar-collapse').collapse('hide');
-});
-// begin navbar collapse on selection ///
