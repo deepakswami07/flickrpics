@@ -1,18 +1,18 @@
+/////////////////////////////////////////
 // begin navbar collapse on selection ///
 $('.navbar-collapse').click('li', function() {
     $('.navbar-collapse').collapse('hide');
 });
-// begin navbar collapse on selection ///
+// end navbar collapse on selection ///
+///////////////////////////////////////
 
 
-////////////////////////////////////////////////////////
-//begin loading getJSON calls//////////////////////////
+///////////////////////////////////////////////
+//begin prevent data binding with every search/
 function checkPictures() {
     $("#getPictures").click(function() {
-        // $("#getPictures").text() === "Generate pics";
         if ($("#links > a").length > 0) {
             console.log("hello");
-            // console.log($("#links").attr("href").length > 0 );
             $("#links > a").remove();
         } else {
             return pictures();
@@ -52,7 +52,12 @@ function checkFavorite() {
         }
     });
 }
+/////////////////////////////////////////////
+//end prevent data binding with every search/
 
+
+///////////////////////////
+//begin loading ajax calls/
 function loadAll() {
     $(document).ready(function() {
         $("#pictures").click(function() {
@@ -86,10 +91,10 @@ function loadAll() {
 }
 
 loadAll();
+//end loading ajax calls//
+/////////////////////////
 
 
-//begin loading getJSON calls//////////////////////////
-////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
 //begin signup passowrd/confirm password validation form
 var $signupPassword = $("#signupPassword");
@@ -111,6 +116,7 @@ function isEmailValid() {
     var email = $loginEmail.val();
     return emailPattern.test(email);
 }
+
 $("#signupForm p").hide();
 $("#loginForm p").hide();
 
@@ -151,3 +157,5 @@ $signupConfirmPassword.focus(checkSignupConfirmPassword).keyup(
     checkSignupConfirmPassword);
 $signupEmail.focus(checkSignupEmail).keyup(checkSignupEmail);
 $loginEmail.focus(checkLoginEmail).keyup(checkLoginEmail);
+////////////////////////////////////////////////////////
+//begin signup passowrd/confirm password validation form
