@@ -17,6 +17,10 @@ body {
     -o-background-size:cover
 }
 
+.deactivated {
+  display: : none;
+}
+
 form {
     text-align:center
 }
