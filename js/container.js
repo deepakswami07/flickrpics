@@ -16,8 +16,8 @@ $picturesFormHTML += '<form class="navbar-form navbar-center" role="picutres">';
 $picturesFormHTML += '<div class="form-group">';
 $picturesFormHTML += '<label for="getPictures"></label>';
 $picturesFormHTML += '<div class="form-group">';
-$picturesFormHTML += ' <button id="getPictures" type="submit" value="pictures" style="text-align:center">';
-$picturesFormHTML += '<span>CLICK   </span>';
+$picturesFormHTML += ' <button class="btn btn-info button-style"" id="getPictures" type="submit" value="pictures" style="text-align:center">';
+$picturesFormHTML += '<span>CLICK TO SEE PICS OF THE DAY  </span>';
 $picturesFormHTML += '<span class="glyphicon glyphicon-download"></span>';
 $picturesFormHTML += '</button>';
 $picturesFormHTML += '</div>';
@@ -44,7 +44,7 @@ $usernamePicsFormHTML += '<div class="form-group">';
 $usernamePicsFormHTML += '<label for="searchFriendsName"></label>';
 $usernamePicsFormHTML += '<div class="form-group">';
 $usernamePicsFormHTML += '<input type="text" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="Type in seach term...">';
-$usernamePicsFormHTML += ' <button class="button-style" id="submit" type="submit" value="search">';
+$usernamePicsFormHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
 $usernamePicsFormHTML += '<span class="glyphicon glyphicon-search"></span>';
 $usernamePicsFormHTML += '</button>';
 $usernamePicsFormHTML += '</div>';
@@ -70,7 +70,7 @@ $useridPicsFormHTML += '<div class="form-group">';
 $useridPicsFormHTML += '<label for="searchFriendsID"></label>';
 $useridPicsFormHTML += '<div class="form-group">';
 $useridPicsFormHTML += '<input type="text" class="form-control" id="searchFriendsID" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
-$useridPicsFormHTML += ' <button class="button-style" id="submit" type="submit" value="search">';
+$useridPicsFormHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
 $useridPicsFormHTML += '<span class="glyphicon glyphicon-search"></span>';
 $useridPicsFormHTML += '</button>';
 $useridPicsFormHTML += '</div>';
@@ -96,7 +96,7 @@ $favoritesPicsFormHTML += '<div class="form-group">';
 $favoritesPicsFormHTML += '<label for="searchFriendsFav"></label>';
 $favoritesPicsFormHTML += '<div class="form-group">';
 $favoritesPicsFormHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="username or id">';
-$favoritesPicsFormHTML += ' <button class="button-style" id="submit" type="submit" value="search">';
+$favoritesPicsFormHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
 $favoritesPicsFormHTML += '<span class="glyphicon glyphicon-search"></span>';
 $favoritesPicsFormHTML += '</button>';
 $favoritesPicsFormHTML += '</div>';
@@ -162,48 +162,75 @@ var $homePicsFormHTML = " ";
 // end ajax for search pics
 ///////////////////////////
 
+var $loadImageGalleryHTML = " ";
+$loadImageGalleryHTML += '<div class="container">';
+$loadImageGalleryHTML += '<form class="form-inline">';
+$loadImageGalleryHTML += '<div class="form-group">';
+$loadImageGalleryHTML += '<button id="image-gallery-button" type="button" class="btn btn-primary btn-md">Launch Image Gallery</button>';
+$loadImageGalleryHTML += '</div>';
+$loadImageGalleryHTML += '</form>';
+$loadImageGalleryHTML += '</div>';
+
+// <div id="load-image-gallery" class="container hidden">
+
+//         <form class="form-inline">
+//             <div class="form-group">
+//                 <button id="image-gallery-button" type="button" class="btn btn-default btn-md">Launch Image Gallery</button>
+//             </div>
+//         </form>
+//  </div>
 
 //////////////////////////
 // begin append to HTML //
 $("#pictures").click(function() {
     document.getElementById("toFill").innerHTML = $picturesHTML;
     document.getElementById("result").innerHTML = $picturesFormHTML;
+    document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 }); 
 
 $("#searchPics").click(function() {
     document.getElementById("toFill").innerHTML = $searchPicsHTML;
     document.getElementById("result").innerHTML = $searchPicsFormHTML;
+    document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 });
 
 $("#userID").click(function() {
     document.getElementById("toFill").innerHTML = $useridHTML;
     document.getElementById("result").innerHTML = $useridPicsFormHTML;
+    document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 });
 
 $("#username").click(function() {
     document.getElementById("toFill").innerHTML = $usernameHTML;
     document.getElementById("result").innerHTML = $usernamePicsFormHTML;
+    document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 });
 
 $("#favorites").click(function() {
     document.getElementById("toFill").innerHTML = $favoritesHTML;
     document.getElementById("result").innerHTML = $favoritesPicsFormHTML;
+    document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 });
 
 $("#home").click(function(){
      document.getElementById("toFill").innerHTML = $home;
      document.getElementById("result").innerHTML = $homePicsFormHTML;
+     document.getElementById("loadImageGallery").innerHTML = "";
 });
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
     document.getElementById("result").innerHTML = $aboutPicsFormHTML;
+    document.getElementById("loadImageGallery").innerHTML = "";
 });
 
 /// end append to HTML ///
 //////////////////////////
 
-
+// $("#getPictures").click(function(){
+//     console.log("hello");
+//      document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
+// });
 
 
 
