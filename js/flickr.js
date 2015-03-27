@@ -24,7 +24,7 @@ var pictures = function() {
                             '.static.flickr.com/' +
                             item.server + '/' + item.id +
                             '_' + item.secret;
-                        $('<a/>').append($('<img class="image">').prop(
+                        $('<a/>').append($('<img>').prop(
                             'src', baseUrl +
                             '_s.jpg')).prop('href',
                             baseUrl + '_b.jpg').prop(
@@ -57,7 +57,7 @@ var usernamePictures = function() {
             var apiKey = '9a204c1e5292bcbc81473e3ea47dd1d3';
             var $searchField = $("#searchFriendsName");
             var username = $searchField.val();
-            // console.log(username)
+            console.log(username)
             $.ajax({
                 url: 'https://api.flickr.com/services/rest/',
                 data: {
