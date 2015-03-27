@@ -24,7 +24,7 @@ var pictures = function() {
                             '.static.flickr.com/' +
                             item.server + '/' + item.id +
                             '_' + item.secret;
-                        $('<a/>').append($('<img>').prop(
+                        $('<a/>').append($('<img class="image">').prop(
                             'src', baseUrl +
                             '_s.jpg')).prop('href',
                             baseUrl + '_b.jpg').prop(
