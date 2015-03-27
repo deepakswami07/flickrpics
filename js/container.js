@@ -1,5 +1,5 @@
-//////////////////////////
-// begin ajax for random pics
+/////////////////////////////////////////////
+// begin ajax for interesting pics of the day
 var $picturesHTML = " ";
 $picturesHTML += '<div class="">';
 $picturesHTML += '<section>';
@@ -23,12 +23,12 @@ $picturesFormHTML += '</button>';
 $picturesFormHTML += '</div>';
 $picturesFormHTML += '</div>';
 $picturesFormHTML += '</form>';
-// end ajax for random pics
-///////////////////////////
+/////////////////////////////////////////////
+// end ajax for interesting pics of the day
 
 
-//////////////////////////
-//begin ajax for for username
+///////////////////////////////////
+//begin ajax for for search by text
 var $usernameHTML = " ";
 $usernameHTML += '<section>';
 $usernameHTML += '<h1 class="main-header">SEARCH</h1>';
@@ -50,10 +50,11 @@ $usernamePicsFormHTML += '</button>';
 $usernamePicsFormHTML += '</div>';
 $usernamePicsFormHTML += '</div>';
 $usernamePicsFormHTML += '</form>';
-//end ajax for friends pics by username
-////////////////////////////
+///////////////////////////////////
+//begin ajax for for search by text
 
-///////////////////////////
+
+/////////////////////////////
 // begin ajax for userid pics
 var $useridHTML = " ";
 $useridHTML += '<section>';
@@ -79,7 +80,8 @@ $useridPicsFormHTML += '</form>';
 //end ajax for userid pics
 ///////////////////////////
 
-///////////////////////////
+
+//////////////////////////////////////
 // begin ajax for friends favorite pics
 var $favoritesHTML = " ";
 $favoritesHTML += '<section>';
@@ -103,13 +105,13 @@ $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</div>';
 $favoritesPicsFormHTML += '</form>';
 // end ajax for favorite pics
-///////////////////////////
+////////////////////////////
 
 //////////////////////////
 // begin ajax for search pics
 
 
-//////////////////////////
+////////////////////////////
 // begin ajax for about HTML
 var $aboutHTML = " ";
 $aboutHTML += '<section>';
@@ -125,7 +127,7 @@ var $aboutPicsFormHTML = " ";
 ///////////////////////////
 
 
-//////////////////////////
+//////////////////////
 //begin ajax for home
 var $home = " ";
 $home += '<section id="toFill">';
@@ -138,30 +140,10 @@ $home += '</section>';
 var $homePicsFormHTML = " ";
 // end ajax for about home
 ///////////////////////////
-// var $searchPicsHTML = " ";
-// $searchPicsHTML += '<section>';
-// $searchPicsHTML += '<h1 class="main-header">SEARCH</h1>';
-// $searchPicsHTML += '<h1 class="second-header-search">pics by topic</h1>';
-// $searchPicsHTML += '<article>';
-// $searchPicsHTML += '<p class="description">Type in a search term to find the most recent photos that have been posted on Flickr.</p>';
-// $searchPicsHTML += '</article>';
-// $searchPicsHTML += '</section>';
 
-// var $searchPicsFormHTML = " ";
-// $searchPicsFormHTML += '<form class="navbar-form navbar-center" role="search">';
-// $searchPicsFormHTML += '<div class="form-group">';
-// $searchPicsFormHTML += '<label for="search"></label>';
-// $searchPicsFormHTML += '<div class="form-group">';
-// $searchPicsFormHTML += '<input type="text" class="form-control" id="search" name="search" placeholder="search Pics">';
-// $searchPicsFormHTML += ' <button class="button-style" id="submit" type="submit" value="search">';
-// $searchPicsFormHTML += '<span class="glyphicon glyphicon-search"></span>';
-// $searchPicsFormHTML += '</button>';
-// $searchPicsFormHTML += '</div>';
-// $searchPicsFormHTML += '</div>';
-// $searchPicsFormHTML += '</form>';
-// end ajax for search pics
-///////////////////////////
 
+/////////////////////////////////////////////
+// begin ajax for launch image gallery button
 var $loadImageGalleryHTML = " ";
 $loadImageGalleryHTML += '<div class="container">';
 $loadImageGalleryHTML += '<form class="form-inline">';
@@ -170,15 +152,9 @@ $loadImageGalleryHTML += '<button id="image-gallery-button" type="button" class=
 $loadImageGalleryHTML += '</div>';
 $loadImageGalleryHTML += '</form>';
 $loadImageGalleryHTML += '</div>';
+/////////////////////////////////////////////
+// begin ajax for launch image gallery button
 
-// <div id="load-image-gallery" class="container hidden">
-
-//         <form class="form-inline">
-//             <div class="form-group">
-//                 <button id="image-gallery-button" type="button" class="btn btn-default btn-md">Launch Image Gallery</button>
-//             </div>
-//         </form>
-//  </div>
 
 //////////////////////////
 // begin append to HTML //
@@ -227,10 +203,6 @@ $("#about").click(function() {
 /// end append to HTML ///
 //////////////////////////
 
-// $("#getPictures").click(function(){
-//     console.log("hello");
-//      document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
-// });
 
 
 
