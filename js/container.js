@@ -1,3 +1,18 @@
+//////////////////////
+//begin ajax for home
+var $home = " ";
+$home += '<section id="toFill">';
+$home += '<article>';
+$home += '<h1 class="main-header">FLICKRPICS</h1>';
+$home += '<p id="d-home">With just a click see interesting pictures of the day, search for pictures, friend\'s pics or friend\'s favorites....</p>';
+$home += '</article>';
+$home += '</section>';
+
+var $homePicsFormHTML = " ";
+// end ajax for about home
+///////////////////////////
+
+
 /////////////////////////////////////////////
 // begin ajax for interesting pics of the day
 var $picturesHTML = " ";
@@ -127,19 +142,6 @@ var $aboutPicsFormHTML = " ";
 ///////////////////////////
 
 
-//////////////////////
-//begin ajax for home
-var $home = " ";
-$home += '<section id="toFill">';
-$home += '<h1 class="main-header">FLICKRPICS</h1>';
-$home += '<article>';
-$home += '<p id="d-home">With just a click see interesting pictures of the day, search for pictures, friend\'s pics or friend\'s favorites....</p>';
-$home += '</article>';
-$home += '</section>';
-
-var $homePicsFormHTML = " ";
-// end ajax for about home
-///////////////////////////
 
 
 /////////////////////////////////////////////
@@ -158,10 +160,16 @@ $loadImageGalleryHTML += '</div>';
 
 //////////////////////////
 // begin append to HTML //
-$("#pictures").click(function() {
-    document.getElementById("toFill").innerHTML = $picturesHTML;
+// $("#home").click(function(){
+//      document.getElementById("toFill").innerHTML = $home;
+//      document.getElementById("result").innerHTML = $homePicsFormHTML;
+//      document.getElementById("loadImageGallery").innerHTML = "";
+// });
+
+$("#home").click(function() {
+    document.getElementById("toFill").innerHTML = $home;
     document.getElementById("result").innerHTML = $picturesFormHTML;
-    document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
+    // document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 }); 
 
 $("#searchPics").click(function() {
@@ -188,11 +196,6 @@ $("#favorites").click(function() {
     document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
 });
 
-$("#home").click(function(){
-     document.getElementById("toFill").innerHTML = $home;
-     document.getElementById("result").innerHTML = $homePicsFormHTML;
-     document.getElementById("loadImageGallery").innerHTML = "";
-});
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;

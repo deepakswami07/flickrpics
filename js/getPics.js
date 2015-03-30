@@ -60,6 +60,32 @@ function checkFavorite() {
 //begin loading ajax calls/
 function loadAll() {
     $(document).ready(function() {
+
+///////////////////////////////////////////////////////////
+//////begin get picture of the day when window loads///////
+         $("#getPictures").click(function() {
+            document.getElementById("links").innerHTML = "";
+            if ($("#links > a").length > 0) {
+            console.log("hello");
+            $("#links > a").remove();
+        } else {
+            return pictures();
+        }
+            checkPictures();
+        });
+////// end get picture of the day when window loads///////////
+
+
+/////begin get pictures of the day when you click home button/
+        $("#home").click(function() {
+            document.getElementById("links").innerHTML = "";
+            checkPictures();
+        });
+/////end get pictures of the day when you click home button/
+///////////////////////////////////////////////////////////
+
+
+
         $("#pictures").click(function() {
             document.getElementById("links").innerHTML = "";
             checkPictures();
