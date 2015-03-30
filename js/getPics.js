@@ -7,14 +7,25 @@ $('.navbar-collapse').click('li', function() {
 ///////////////////////////////////////
 
 
+/////////////////////////////////////////
+// begin load gallery button ///
+// function loadGallery(){
+//     document.getElementById("loadImageGallery").innerHTML = $loadImageGalleryHTML;
+// }
+/////////////////////////////////////////
+// end load gallery button ///
+
+
 ///////////////////////////////////////////////
 //begin prevent data binding with every search/
 function checkPictures() {
-    $("#getPictures").click(function() {
+    $("#getPicturesOfTheDay").click(function() {
         if ($("#links > a").length > 0) {
             console.log("hello");
             $("#links > a").remove();
         } else {
+            console.log("hello");
+            loadGallery();
             return pictures();
         }
     });
@@ -63,35 +74,32 @@ function loadAll() {
 
 ///////////////////////////////////////////////////////////
 //////begin get picture of the day when window loads///////
-         $("#getPictures").click(function() {
+         $("#getPicturesOfTheDay").click(function() {
             document.getElementById("links").innerHTML = "";
             if ($("#links > a").length > 0) {
             console.log("hello");
             $("#links > a").remove();
         } else {
+            // loadGallery();
             return pictures();
         }
-            checkPictures();
         });
 ////// end get picture of the day when window loads///////////
-
-
-/////begin get pictures of the day when you click home button/
-        $("#home").click(function() {
-            document.getElementById("links").innerHTML = "";
-            checkPictures();
-        });
-/////end get pictures of the day when you click home button/
 ///////////////////////////////////////////////////////////
 
 
-
-        $("#pictures").click(function() {
+/////////////////////////////////////////////////////////////
+/////begin get pictures of the day when you click home button/
+        $("#home").click(function() {
             document.getElementById("links").innerHTML = "";
-            checkPictures();
+            $("#getPicturesOfTheDay").click(function() {
+                pictures();
+            });
         });
-
-        $("#username").click(function() {
+/////end get pictures of the day when you click home button/
+///////////////////////////////////////////////////////////
+    
+        $("#search").click(function() {
             document.getElementById("links").innerHTML = "";
             checkSearch()
         });
